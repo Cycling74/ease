@@ -15,6 +15,7 @@ include_directories(
 
 
 set( SOURCE_FILES
+	../ease_base.h
 	${PROJECT_NAME}.cpp
 )
 
