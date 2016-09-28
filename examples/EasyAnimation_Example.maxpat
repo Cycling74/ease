@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 3,
-			"revision" : 0,
-			"architecture" : "x64",
+			"minor" : 2,
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 74.0, 79.0, 676.0, 465.0 ],
+		"rect" : [ 367.0, 79.0, 809.0, 489.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,9 +107,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 359.0, 417.5, 191.0, 22.0 ],
+					"patching_rect" : [ 359.0, 417.5, 300.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape @scale 0.1 0.1 0.1"
+					"text" : "jit.gl.gridshape @scale 0.1 0.1 0.1 @color 0.1 1. 0.1 1."
 				}
 
 			}
@@ -161,9 +161,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x64",
+							"minor" : 2,
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -441,7 +441,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 180.0, 367.0, 139.0, 35.0 ],
 					"style" : "",
-					"text" : "-0.03071 0.063284 -0.466387"
+					"text" : "0.032663 -0.387437 0.295645"
 				}
 
 			}
