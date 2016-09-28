@@ -1,4 +1,4 @@
-# Min-DevKit
+# Ease
 [![Build Status](https://travis-ci.com/Cycling74/min-devkit.svg?token=GAmnsUEo9aYasSF5pz8q&branch=master)](https://travis-ci.com/Cycling74/min-devkit)
 [![Build status](https://ci.appveyor.com/api/projects/status/0koqc3l3qyfu0l8b/branch/master?svg=true)](https://ci.appveyor.com/project/c74/min-devkit/branch/master)
 
