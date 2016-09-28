@@ -13,10 +13,10 @@ public:
 	MIN_DESCRIPTION { "Generate or apply an easing function." };
 	MIN_TAGS		{ "functions, timing" };
 	MIN_AUTHOR		{ "Cycling '74" };
-	MIN_RELATED		{ "list.ease, ease~, jit.ease, line, line~, curve~" };
+	MIN_RELATED		{ "ease, ease~, jit.ease, line, line~, curve~" };
 	
-	inlet	input	{ this, "(float) apply easing function, (list) generate easing function." };
-	outlet	output	{ this, "(float) easing function" };
+	inlet	input	{ this, "(list) apply easing function." };
+	outlet	output	{ this, "(list) easing function" };
 
 
 	// define an optional argument for setting the message
@@ -27,9 +27,15 @@ public:
 	};
 
 	// respond to the bang message to do something
-	message number_message { this, "number", "Input value to easing function.",
+	message list_message { this, "list", "Input to easing function.",
 		MIN_FUNCTION {
-			output.send( apply_easing_function(args[0]) );
+			auto	count = args.size();
+			atoms	result(count);
+
+			for (auto i=0; i<args.size(); ++i)
+				result[i] = apply_easing_function(args[i]);
+
+			output.send( result );
 			return {};
 		}
 	};

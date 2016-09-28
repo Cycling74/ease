@@ -13,7 +13,7 @@ public:
 	MIN_DESCRIPTION { "Generate or apply an easing function." };
 	MIN_TAGS		{ "functions, timing" };
 	MIN_AUTHOR		{ "Cycling '74" };
-	MIN_RELATED		{ "ease, ease~, line, line~, curve~" };
+	MIN_RELATED		{ "ease, list.ease, ease~, line, line~, curve~" };
 
 	inlet	input	{ this, "(matrix) apply easing function.", "matrix" };
 	outlet	output	{ this, "(matrix) easing function", "matrix" };
