@@ -22,7 +22,7 @@ public:
 	};
 
 
-	enum class easing {
+	enum class easing : long {
 		linear,
 
 		in_back,
