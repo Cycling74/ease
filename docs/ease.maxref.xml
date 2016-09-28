@@ -63,6 +63,7 @@
 	<!--RELATED-->
 
 	<seealsolist>
+		<seealso name='list.ease' />
 		<seealso name='ease~' />
 		<seealso name='jit.ease' />
 		<seealso name='line' />

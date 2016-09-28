@@ -59,6 +59,7 @@
 
 	<seealsolist>
 		<seealso name='ease' />
+		<seealso name='list.ease' />
 		<seealso name='jit.ease' />
 		<seealso name='line' />
 		<seealso name='line~' />
