@@ -9,9 +9,9 @@
 // https://github.com/philsquared/Catch/blob/master/docs/tutorial.md
 
 SCENARIO( "object produces correct output" ) {
-	ext_main(nullptr);	// every unit test must call ext_main() once to configure the class
+//	ext_main(nullptr);	// every unit test must call ext_main() once to configure the class
 
-	GIVEN( "An instance of our object" ) {
+//	GIVEN( "An instance of our object" ) {
 
 //		test_wrapper<ease> an_instance;
 //		hello_world& my_object = an_instance;
@@ -29,5 +29,5 @@ SCENARIO( "object produces correct output" ) {
 //				REQUIRE(( output[0][0] == symbol("hello world") ));
 //			}
 //		}
-	}
+//	}
 }
