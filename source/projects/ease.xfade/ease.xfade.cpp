@@ -6,7 +6,6 @@
 
 #include "../ease_base.h"
 
-
 class ease : public ease_base<ease> {
 public:
 
@@ -19,15 +18,6 @@ public:
 	inlet	input2	{ this, "(float) easing function position." };
 	outlet	output	{ this, "(list) eased output " };
 
-
-	// define an optional argument for setting the message
-	argument<number> function_arg	{ this, "function", "Initial easing function to use.",
-		MIN_ARGUMENT_FUNCTION {
-			easing_function = arg;
-		}
-	};
-
-
 	message number_message { this, "number", "Normalized transition location.",
 		MIN_FUNCTION {
 			m_position = args[0];
@@ -35,7 +25,6 @@ public:
 			return {};
 		}
 	};
-
 
 // TODO: we crash if there is an empty string for a desc
 
@@ -56,7 +45,6 @@ public:
 		}
 	};
 
-
 	message set_message { this, "set", "Set origin without output.",
 		MIN_FUNCTION {
 			m_origin = from_atoms<std::vector<double>>(args);
@@ -65,7 +53,6 @@ public:
 			return {};
 		}
 	};
-
 
 	message list_message { this, "list", "Set new target.",
 		MIN_FUNCTION {
@@ -83,6 +70,5 @@ private:
 	std::vector<double> m_current;
 	double				m_position { 0.0 };
 };
-
 
 MIN_EXTERNAL(ease);

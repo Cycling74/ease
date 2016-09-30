@@ -6,7 +6,6 @@
 
 #include "../ease_base.h"
 
-
 class ease : public ease_base<ease>, public matrix_operator {
 public:
 
@@ -18,19 +17,6 @@ public:
 	inlet	input	{ this, "(matrix) apply easing function.", "matrix" };
 	outlet	output	{ this, "(matrix) easing function", "matrix" };
 
-
-	argument<number> function_arg	{ this, "function", "Initial easing function to use.",
-		MIN_ARGUMENT_FUNCTION {
-			easing_function = arg;
-		}
-	};
-
-
-	sample operator()(sample x) {
-		return apply_easing_function(x);
-	}
-
-
 	template<class matrix_type, size_t planecount>
 	cell<matrix_type,planecount> calc_cell(cell<matrix_type,planecount> input, const matrix_info& info, matrix_coord& position) {
 		cell<matrix_type,planecount> output;
@@ -39,8 +25,6 @@ public:
 			output[plane] = apply_easing_function(input[plane]);
 		return output;
 	}
-
 };
-
 
 MIN_EXTERNAL(ease);

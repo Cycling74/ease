@@ -6,7 +6,6 @@
 
 #include "../ease_base.h"
 
-
 class ease : public ease_base<ease> {
 public:
 
@@ -18,23 +17,12 @@ public:
 	inlet	input	{ this, "(float) apply easing function, (list) generate easing function." };
 	outlet	output	{ this, "(float) easing function" };
 
-
-	// define an optional argument for setting the message
-	argument<number> function_arg	{ this, "function", "Initial easing function to use.",
-		MIN_ARGUMENT_FUNCTION {
-			easing_function = arg;
-		}
-	};
-
-	// respond to the bang message to do something
 	message number_message { this, "number", "Input value to easing function.",
 		MIN_FUNCTION {
 			output.send( apply_easing_function(args[0]) );
 			return {};
 		}
 	};
-
 };
-
 
 MIN_EXTERNAL(ease);
