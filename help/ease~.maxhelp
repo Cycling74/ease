@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 336.0, 286.0, 891.0, 733.0 ],
+		"rect" : [ 100.0, 100.0, 891.0, 733.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,24 @@
 		"subpatcher_template" : "tap.template",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 495.0, 385.0, 41.0, 23.0 ],
+					"style" : "",
+					"text" : "ease~"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 645.0, 250.0, 150.0, 21.0 ],
-					"presentation_rect" : [ 647.0, 249.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "order the attrs in_...  out_ ..."
 				}
@@ -56,7 +68,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 645.0, 370.0, 150.0, 21.0 ],
-					"presentation_rect" : [ 646.0, 370.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "line"
 				}
@@ -399,6 +410,10 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "ease.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "ease~.mxo",
 				"type" : "iLaX"
 			}
  ],

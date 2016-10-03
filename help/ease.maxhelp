@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 81.0, 108.0, 753.0, 750.0 ],
+		"rect" : [ 100.0, 100.0, 753.0, 750.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 260.0, 140.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 325.0, 67.0, 22.0 ],
-					"presentation_rect" : [ 570.0, 498.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "1., 0. 1000"
 				}
@@ -86,7 +98,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 540.0, 300.0, 120.0, 69.0 ],
-					"presentation_rect" : [ 560.0, 400.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "Apply the easing function to a stream of values"
 				}
@@ -102,7 +113,6 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 465.0, 495.0, 50.0, 22.0 ],
-					"presentation_rect" : [ 538.0, 541.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -156,7 +166,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 465.0, 455.0, 36.0, 22.0 ],
-					"presentation_rect" : [ 450.0, 497.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "ease"
 				}
@@ -435,7 +444,6 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 665.0, 325.0, 20.0, 20.0 ],
-					"presentation_rect" : [ 685.0, 410.0, 0.0, 0.0 ],
 					"rounded" : 60.0,
 					"style" : "",
 					"text" : "2",
@@ -522,6 +530,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -627,7 +644,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
+				"bootpath" : "~/Code/Max/maxmsp-misc/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

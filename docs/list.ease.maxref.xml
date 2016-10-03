@@ -28,9 +28,24 @@
 			<description>Initial easing function to use. </description>
 		</objarg>
 
-		<objarg name='function' optional='1' type='number'>
-			<digest>Initial easing function to use</digest>
-			<description>Initial easing function to use. </description>
+		<objarg name='input_range[low]' optional='1' type='number'>
+			<digest>Initial low value for the input range</digest>
+			<description>Initial low value for the input range. </description>
+		</objarg>
+
+		<objarg name='input_range[high]' optional='1' type='number'>
+			<digest>Initial high value for the input range</digest>
+			<description>Initial high value for the input range. </description>
+		</objarg>
+
+		<objarg name='output_range[low]' optional='1' type='number'>
+			<digest>Initial low value for the output range</digest>
+			<description>Initial low value for the output range. </description>
+		</objarg>
+
+		<objarg name='output_range[high]' optional='1' type='number'>
+			<digest>Initial high value for the output range</digest>
+			<description>Initial high value for the output range. </description>
 		</objarg>
 
 	</objarglist>
@@ -51,6 +66,16 @@
 	<!--ATTRIBUTES-->
 
 	<attributelist>
+
+		<attribute name='output_range' get='1' set='1' type='float64' size='1' >
+			<digest>Expected numeric range for the output</digest>
+			<description>Expected numeric range for the output. </description>
+		</attribute>
+
+		<attribute name='input_range' get='1' set='1' type='float64' size='1' >
+			<digest>Expected numeric range for the input</digest>
+			<description>Expected numeric range for the input. </description>
+		</attribute>
 
 		<attribute name='function' get='1' set='1' type='long' size='1' >
 			<digest>Easing function to be applied or generated</digest>
