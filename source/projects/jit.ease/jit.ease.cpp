@@ -17,6 +17,10 @@ public:
 	inlet	input	{ this, "(matrix) apply easing function.", "matrix" };
 	outlet	output	{ this, "(matrix) easing function", "matrix" };
 
+	ease(const atoms& args = {}) {
+		handle_object_arguments(args);
+	}
+
 	template<class matrix_type, size_t planecount>
 	cell<matrix_type,planecount> calc_cell(cell<matrix_type,planecount> input, const matrix_info& info, matrix_coord& position) {
 		cell<matrix_type,planecount> output;

@@ -17,6 +17,10 @@ public:
 	inlet	input	{ this, "(signal) apply easing function, (list) generate easing function." };
 	outlet	output	{ this, "(signal) easing function", "signal" };
 
+	ease(const atoms& args = {}) {
+		handle_object_arguments(args);
+	}
+
 	sample operator()(sample x) {
 		return apply_easing_function(x);
 	}

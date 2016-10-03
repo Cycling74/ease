@@ -1,4 +1,4 @@
-/// @file	
+/// @file
 ///	@ingroup 	minexamples
 ///	@copyright	Copyright (c) 2016, Cycling '74
 /// @author		Timothy Place
@@ -16,6 +16,10 @@ public:
 	
 	inlet	input	{ this, "(float) apply easing function, (list) generate easing function." };
 	outlet	output	{ this, "(float) easing function" };
+
+	ease(const atoms& args = {}) {
+		handle_object_arguments(args);
+	}
 
 	message number_message { this, "number", "Input value to easing function.",
 		MIN_FUNCTION {

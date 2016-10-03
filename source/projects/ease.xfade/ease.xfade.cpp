@@ -18,6 +18,10 @@ public:
 	inlet	input2	{ this, "(float) easing function position." };
 	outlet	output	{ this, "(list) eased output " };
 
+	ease(const atoms& args = {}) {
+		handle_object_arguments(args);
+	}
+
 	message number_message { this, "number", "Normalized transition location.",
 		MIN_FUNCTION {
 			m_position = args[0];

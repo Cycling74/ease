@@ -17,6 +17,10 @@ public:
 	inlet	input	{ this, "(list) apply easing function." };
 	outlet	output	{ this, "(list) easing function" };
 
+	ease(const atoms& args = {}) {
+		handle_object_arguments(args);
+	}
+
 	message list_message { this, "list", "Input to easing function.",
 		MIN_FUNCTION {
 			auto	count = args.size();
