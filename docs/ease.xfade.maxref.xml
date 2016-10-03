@@ -106,6 +106,7 @@
 		<seealso name='ease' />
 		<seealso name='ease~' />
 		<seealso name='jit.ease' />
+		<seealso name='list.ease' />
 		<seealso name='line' />
 		<seealso name='line~' />
 		<seealso name='curve~' />
