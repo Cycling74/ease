@@ -54,11 +54,10 @@ public:
 		description { "Expected numeric range for the output." }
 	};
 
-
 protected:
 	number apply_easing_function(number input) {
-		numbers input_range = this->input_range;
-		numbers output_range = this->input_range;
+		const numbers& input_range = this->input_range;
+		const numbers& output_range = this->output_range;
 
 		assert(input_range.size() == 2);	// TODO: enforce in the attribute<> class
 		assert(output_range.size() == 2);	// TODO: enforce in the attribute<> class
