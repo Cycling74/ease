@@ -12,7 +12,7 @@ public:
 	MIN_DESCRIPTION { "Generate or apply an easing function." };
 	MIN_TAGS		{ "functions, timing" };
 	MIN_AUTHOR		{ "Cycling '74" };
-	MIN_RELATED		{ "ease, ease~, jit.ease, line, line~, curve~" };
+	MIN_RELATED		{ "ease, ease~, jit.ease, list.ease, line, line~, curve~" };
 	
 	inlet	input	{ this, "(list) new target or origin" };
 	inlet	input2	{ this, "(float) easing function position." };

@@ -12,7 +12,6 @@ template<class derived_min_class_type>
 class ease_base : public object<derived_min_class_type> {
 public:
 
-	// define an optional argument for setting the message
 	argument<number> function_arg	{ this, "function", "Initial easing function to use.",
 		MIN_ARGUMENT_FUNCTION {
 			easing_function = arg;
@@ -43,8 +42,6 @@ public:
 		}
 	};
 
-
-
 	attribute<easing::function> easing_function { this, "function", easing::function::linear, easing::function_info,
 		description { "Easing function to be applied or generated." }
 	};
@@ -73,5 +70,4 @@ protected:
 
 		return (y * (output_range[1] - output_range[0])) + output_range[0];
 	}
-
 };
