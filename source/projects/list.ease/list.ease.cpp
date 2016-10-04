@@ -10,7 +10,7 @@ class ease : public ease_base<ease> {
 public:
 
 	MIN_DESCRIPTION { "Generate or apply an easing function." };
-	MIN_TAGS		{ "functions, timing" };
+	MIN_TAGS		{ "ease, functions" };
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, jit.ease, ease.xfade, ease.xfade~, line, line~, curve~" };
 	

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
-<vignette name="Ease Package Overview" package="Link">
+<vignette name="Ease Package Overview" package="Ease">
   <metadatalist>
     <metadata name="author">Cycling '74</metadata>
     <metadata name="tag">ease</metadata>
@@ -45,6 +45,12 @@
 		<seealso name="j.ramp~" />
 		<seealso name="curve~" />
 		<seealso name="line" />
+		<seealso name="ease" />
+		<seealso name="ease~" />
+		<seealso name="list.ease" />
+		<seealso name="jit.ease" />
+		<seealso name="ease.xfade" />
+		<seealso name="ease.xfade~" />
   </seealsolist>
 	
 </vignette>

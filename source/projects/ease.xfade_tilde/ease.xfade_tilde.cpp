@@ -10,7 +10,7 @@ class ease_xfade_tilde : public ease_base<ease_xfade_tilde>, public sample_opera
 public:
 
 	MIN_DESCRIPTION { "Use an easing function to interpolate between two sample values." };
-	MIN_TAGS		{ "functions, timing" };
+	MIN_TAGS		{ "ease, functions" };
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, list.ease, jit.ease, ease.xfade, line, line~, curve~" };
 
