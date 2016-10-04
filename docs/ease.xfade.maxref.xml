@@ -105,6 +105,7 @@
 	<seealsolist>
 		<seealso name='ease' />
 		<seealso name='ease~' />
+		<seealso name='ease.xfade~' />
 		<seealso name='jit.ease' />
 		<seealso name='list.ease' />
 		<seealso name='line' />

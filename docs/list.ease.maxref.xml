@@ -91,6 +91,8 @@
 		<seealso name='ease' />
 		<seealso name='ease~' />
 		<seealso name='jit.ease' />
+		<seealso name='ease.xfade' />
+		<seealso name='ease.xfade~' />
 		<seealso name='line' />
 		<seealso name='line~' />
 		<seealso name='curve~' />
