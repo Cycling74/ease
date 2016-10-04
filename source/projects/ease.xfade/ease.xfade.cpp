@@ -9,7 +9,7 @@
 class ease : public ease_base<ease> {
 public:
 
-	MIN_DESCRIPTION { "Generate or apply an easing function." };
+	MIN_DESCRIPTION { "Use an easing function to interpolate between successive lists." };
 	MIN_TAGS		{ "functions, timing" };
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, ease.xfade~, jit.ease, list.ease, line, line~, curve~" };
