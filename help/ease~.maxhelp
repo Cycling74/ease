@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -40,6 +40,78 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 3,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 5.0, 5.0 ],
+						"gridsnaponopen" : 2,
+						"objectsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"showontab" : 1,
+						"boxes" : [  ],
+						"lines" : [  ],
+						"styles" : [ 							{
+								"name" : "tap",
+								"default" : 								{
+									"fontname" : [ "Lato Light" ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 90.0, 200.0, 27.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p ?"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -50,7 +122,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -174,21 +246,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"quality" : [ "basic" ],
-													"pitchshift" : [ 1.0 ],
-													"originallengthms" : [ 0.0 ],
-													"speed" : [ 1.0 ],
-													"pitchcorrection" : [ 0 ],
 													"formantcorrection" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formant" : [ 1.0 ],
 													"originaltempo" : [ 120.0 ],
+													"mode" : [ "basic" ],
+													"basictuning" : [ 440 ],
+													"pitchcorrection" : [ 0 ],
+													"play" : [ 0 ],
+													"speed" : [ 1.0 ],
+													"pitchshift" : [ 1.0 ],
 													"timestretch" : [ 0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"play" : [ 0 ],
-													"basictuning" : [ 440 ],
-													"slurtime" : [ 0.0 ]
+													"originallengthms" : [ 0.0 ],
+													"slurtime" : [ 0.0 ],
+													"quality" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"originallength" : [ 0.0, "ticks" ]
 												}
 
 											}
@@ -233,7 +305,7 @@
 											"major" : 7,
 											"minor" : 3,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -336,7 +408,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "signal" ],
 													"patching_rect" : [ 292.0, 32.0, 30.0, 30.0 ],
 													"style" : ""
 												}
@@ -554,7 +626,7 @@
 											"major" : 7,
 											"minor" : 3,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -911,21 +983,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"quality" : [ "basic" ],
-													"pitchshift" : [ 1.0 ],
-													"originallengthms" : [ 0.0 ],
-													"speed" : [ 1.0 ],
-													"pitchcorrection" : [ 0 ],
 													"formantcorrection" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formant" : [ 1.0 ],
 													"originaltempo" : [ 120.0 ],
+													"mode" : [ "basic" ],
+													"basictuning" : [ 440 ],
+													"pitchcorrection" : [ 0 ],
+													"play" : [ 0 ],
+													"speed" : [ 1.0 ],
+													"pitchshift" : [ 1.0 ],
 													"timestretch" : [ 0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"play" : [ 0 ],
-													"basictuning" : [ 440 ],
-													"slurtime" : [ 0.0 ]
+													"originallengthms" : [ 0.0 ],
+													"slurtime" : [ 0.0 ],
+													"quality" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"originallength" : [ 0.0, "ticks" ]
 												}
 
 											}
@@ -1012,7 +1084,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 375.0, 395.0, 134.0, 22.0 ],
 									"style" : "",
 									"text" : "ease~ -1. 1. 100. 1000."
@@ -1332,7 +1404,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1477,7 +1549,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 450.0, 440.0, 44.0, 22.0 ],
 									"style" : "",
 									"text" : "ease~"
@@ -2016,6 +2088,14 @@
 				"bootpath" : "C74:/media/msp",
 				"type" : "AIFF",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "ease.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "ease~.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0,

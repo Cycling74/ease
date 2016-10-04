@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -40,6 +40,78 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 3,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 5.0, 5.0 ],
+						"gridsnaponopen" : 2,
+						"objectsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"showontab" : 1,
+						"boxes" : [  ],
+						"lines" : [  ],
+						"styles" : [ 							{
+								"name" : "tap",
+								"default" : 								{
+									"fontname" : [ "Lato Light" ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 90.0, 200.0, 27.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p ?"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-29",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -50,7 +122,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -128,7 +200,7 @@
 											"major" : 7,
 											"minor" : 3,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1207,7 +1279,7 @@
 									"destination" : [ "obj-48", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 204.5, 750.0, 369.0, 750.0, 369.0, 526.0, 484.5, 526.0 ],
+									"midpoints" : [ 204.5, 750.0, 369.0, 750.0, 369.0, 526.0, 462.0, 526.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -1515,25 +1587,25 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-29::obj-48::obj-1::obj-20" : [ "Freq[1]", "Freq", 0 ],
-			"obj-29::obj-29" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-29::obj-48::obj-1::obj-63" : [ "CV3[1]", "CV3", 0 ],
-			"obj-29::obj-48::obj-69::obj-55" : [ "power", "power", 0 ],
+			"obj-29::obj-48::obj-69::obj-23" : [ "CV2", "CV2", 0 ],
+			"obj-29::obj-48::obj-69::obj-28" : [ "Res", "Res", 0 ],
 			"obj-29::obj-48::obj-1::obj-22" : [ "TimeMode[1]", "TimeMode", 1 ],
+			"obj-29::obj-48::obj-1::obj-4" : [ "Offset[1]", "Offset", 0 ],
 			"obj-29::obj-48::obj-69::obj-63" : [ "CV3", "CV3", 0 ],
-			"obj-29::obj-48::obj-1::obj-54" : [ "CV1[1]", "CV1", 0 ],
 			"obj-29::obj-48::obj-69::obj-95" : [ "ResCV", "CV", 0 ],
-			"obj-29::obj-48::obj-69::obj-54" : [ "CV1", "CV1", 0 ],
-			"obj-29::obj-48::obj-1::obj-23" : [ "CV2[1]", "CV2", 0 ],
-			"obj-29::obj-48::obj-69::obj-22" : [ "TimeMode", "TimeMode", 1 ],
 			"obj-29::obj-48::obj-1::obj-28" : [ "Res[1]", "Res", 0 ],
 			"obj-29::obj-48::obj-69::obj-20" : [ "Freq", "Freq", 0 ],
-			"obj-29::obj-48::obj-1::obj-4" : [ "Offset[1]", "Offset", 0 ],
 			"obj-29::obj-48::obj-1::obj-55" : [ "power[1]", "power", 0 ],
+			"obj-29::obj-48::obj-1::obj-54" : [ "CV1[1]", "CV1", 0 ],
+			"obj-29::obj-29" : [ "live.gain~[3]", "live.gain~", 0 ],
 			"obj-29::obj-48::obj-69::obj-4" : [ "Offset", "Offset", 0 ],
-			"obj-29::obj-48::obj-69::obj-23" : [ "CV2", "CV2", 0 ],
+			"obj-29::obj-48::obj-1::obj-20" : [ "Freq[1]", "Freq", 0 ],
 			"obj-29::obj-48::obj-1::obj-95" : [ "ResCV[1]", "CV", 0 ],
-			"obj-29::obj-48::obj-69::obj-28" : [ "Res", "Res", 0 ]
+			"obj-29::obj-48::obj-69::obj-54" : [ "CV1", "CV1", 0 ],
+			"obj-29::obj-48::obj-1::obj-63" : [ "CV3[1]", "CV3", 0 ],
+			"obj-29::obj-48::obj-1::obj-23" : [ "CV2[1]", "CV2", 0 ],
+			"obj-29::obj-48::obj-69::obj-55" : [ "power", "power", 0 ],
+			"obj-29::obj-48::obj-69::obj-22" : [ "TimeMode", "TimeMode", 1 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1553,6 +1625,10 @@
 				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "ease.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "ease.xfade~.mxo",
