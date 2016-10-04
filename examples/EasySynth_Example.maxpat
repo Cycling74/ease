@@ -98,7 +98,7 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 89.0, 222.0, 148.0, 22.0 ],
 					"style" : "",
-					"text" : "poly~ easy_synth_voice 4"
+					"text" : "poly~ ease.synth_voice 4"
 				}
 
 			}
@@ -455,7 +455,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "easy_synth_voice.maxpat",
+				"name" : "ease.synth_voice.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/ease/patchers",
 				"type" : "JSON",
 				"implicit" : 1
