@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -50,11 +50,11 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 753.0, 724.0 ],
+						"rect" : [ 0.0, 26.0, 753.0, 724.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -93,7 +93,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 580.0, 70.0, 120.0, 40.0 ],
-									"presentation_rect" : [ 126.0, 455.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "choose a function",
 									"textjustification" : 2
@@ -369,7 +368,7 @@
 											"major" : 7,
 											"minor" : 3,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -698,7 +697,6 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 630.0, 50.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 106.0, 470.0, 0.0, 0.0 ],
 									"rounded" : 60.0,
 									"style" : "",
 									"text" : "4",
@@ -1033,7 +1031,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1581,11 +1579,11 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 753.0, 724.0 ],
+						"rect" : [ 100.0, 126.0, 753.0, 724.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2058,7 +2056,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 15.0, 620.0, 125.0 ]
+									"patching_rect" : [ 10.0, 10.0, 620.0, 125.0 ]
 								}
 
 							}
@@ -2381,13 +2379,13 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
-				"bootpath" : "~/Code/Max/maxmsp-misc/help/resources",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpname.js",
-				"bootpath" : "~/Code/Max/maxmsp-misc/help/resources",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
