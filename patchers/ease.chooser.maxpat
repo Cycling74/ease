@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -65,7 +65,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-45",
-					"items" : [ "linear", ",", "in_back", ",", "in_bounce", ",", "in_circular", ",", "in_cubic", ",", "in_elastic", ",", "in_exponential", ",", "in_quadratic", ",", "in_quartic", ",", "in_quintic", ",", "in_sine", ",", "in_out_back", ",", "in_out_bounce", ",", "in_out_circular", ",", "in_out_cubic", ",", "in_out_elastic", ",", "in_out_exponential", ",", "in_out_quadratic", ",", "in_out_quartic", ",", "in_out_quintic", ",", "in_out_sine", ",", "out_back", ",", "out_bounce", ",", "out_circular", ",", "out_cubic", ",", "out_elastic", ",", "out_exponential", ",", "out_Quadratic", ",", "out_quartic", ",", "out_quintic", ",", "out_sine" ],
+					"items" : [ "linear", ",", "in_back", ",", "in_bounce", ",", "in_circular", ",", "in_cubic", ",", "in_elastic", ",", "in_exponential", ",", "in_quadratic", ",", "in_quartic", ",", "in_quintic", ",", "in_sine", ",", "in_out_back", ",", "in_out_bounce", ",", "in_out_circular", ",", "in_out_cubic", ",", "in_out_elastic", ",", "in_out_exponential", ",", "in_out_quadratic", ",", "in_out_quartic", ",", "in_out_quintic", ",", "in_out_sine", ",", "out_back", ",", "out_bounce", ",", "out_circular", ",", "out_cubic", ",", "out_elastic", ",", "out_exponential", ",", "out_quadratic", ",", "out_quartic", ",", "out_quintic", ",", "out_sine" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -90,7 +90,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
