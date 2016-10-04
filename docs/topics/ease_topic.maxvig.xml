@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Ease Package Overview" package="Link">
+  <metadatalist>
+    <metadata name="author">Cycling '74</metadata>
+    <metadata name="tag">ease</metadata>
+  </metadatalist>
+	
+	
+  <h1>Ease Package</h1>
+  <p>
+		The Ease package is a collection of objects for applying easing functions as formalized and popularized by 
+		<a href="http://robertpenner.com/easing/">Robert Penner</a>.
+		The Ease package provides objects and examples covering control streams, audio streams, matrix applications, 
+		open gl geometry and scene automation, as well as applications for audio in <o>gen~</o>.
+	</p>
+
+
+	<h2>The Easing Objects</h2>
+  <ul>
+    <li><openfilelink filename="ease.maxhelp">ease</openfilelink> - Apply easing functions to numbers in Max, with optional scaling.</li>
+    <li><openfilelink filename="ease~.maxhelp">ease~</openfilelink> - Apply easing functions to audio signals, with optional scaling.</li>
+    <li><openfilelink filename="list.ease.maxhelp">list.ease</openfilelink> - Apply easing functions to each element of a list, with optional scaling.</li>
+    <li><openfilelink filename="jit.ease.maxhelp">jit.ease</openfilelink> - Apply easing functions to each cell of a matrix, with optional scaling.</li>
+    <li><openfilelink filename="ease.xfade.maxhelp">ease.xfade</openfilelink> - Use an easing function to interpolate between successive lists.</li>
+    <li><openfilelink filename="ease.xfade~.maxhelp">ease.xfade~</openfilelink> - Use an easing function to interpolate between two samples at audio rate.</li>
+  </ul>
+		
+	
+  <h2>Example Patches</h2>
+  <cr/>
+  <ul>
+    <li><openfilelink filename="ease.animation_example.maxpat">ease.animation_example.maxpat</openfilelink> 			- Animated OpenGL geometry and audio synthesis.</li>
+    <li><openfilelink filename="ease.per_multiple_example.maxpat">ease.per_multiple_example.maxpat</openfilelink> - Integration of <o>jit.ease</o>, multiple geometry and <o>jit.gen</o>.</li>
+    <li><openfilelink filename="ease.synth_example.maxpat">ease.synth_example.maxpat</openfilelink> 							- Polyphonic synth with easing applied to envelopes.</li>
+    <li><openfilelink filename="ease.gen.codebox_example.maxpat">ease.gen.codebox_example.maxpat</openfilelink> 	- Demonstrate how to call the easing functions from a codebox in <o>gen~</o>.</li>
+    <li><openfilelink filename="ease.gen.comparison.maxpat">ease.gen.comparison.maxpat</openfilelink> 						- Visual comparison running all easing functions in individual <o>gen~</o> instances.</li>
+  </ul>
+  <cr/>
+		
+	
+  <seealsolist>
+		<!-- <seealso name="timing_events_topic" module="topics" type="vignette" />	-->
+		<seealso name="242.lut" />
+		<seealso name="j.ramp~" />
+		<seealso name="curve~" />
+		<seealso name="line" />
+  </seealsolist>
+	
+</vignette>
