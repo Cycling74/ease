@@ -30,8 +30,6 @@ public:
 		}
 	};
 
-// TODO: we crash if there is an empty string for a desc
-
 	message bang { this, "bang", "Output",
 		MIN_FUNCTION {
 			auto position1 = apply_easing_function(m_position);

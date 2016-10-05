@@ -24,7 +24,6 @@ public:
 	sample operator()(sample x) {
 		return apply_easing_function(x);
 	}
-
 };
 
 MIN_EXTERNAL(ease);
