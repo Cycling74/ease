@@ -33,6 +33,7 @@ public:
 		MIN_FUNCTION {
 			auto position1 = apply_easing_function(m_position);
 			auto position2 = 1.0 - position1;
+			atoms result;
 
 			{
 				lock lock(m_mutex);
@@ -42,7 +43,7 @@ public:
 
 				for (auto i=0; i<size; ++i)
 					m_current[i] = position2 * m_origin[i]  +  position1 * m_target[i];
-				atoms result = to_atoms(m_current);
+				result = to_atoms(m_current);
 			}
 
 			output.send(result);
