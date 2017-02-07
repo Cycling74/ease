@@ -1,5 +1,4 @@
 /// @file	
-///	@ingroup 	minexamples
 ///	@copyright	Copyright (c) 2016, Cycling '74
 /// @author		Timothy Place
 ///	@license	Usage of this file and its contents is governed by the MIT License
@@ -14,14 +13,14 @@ public:
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, jit.ease, ease.xfade, ease.xfade~, line, line~, curve~" };
 	
-	inlet	input	{ this, "(list) apply easing function." };
-	outlet	output	{ this, "(list) easing function" };
+	inlet<>		input	{ this, "(list) apply easing function." };
+	outlet<>	output	{ this, "(list) easing function" };
 
 	ease(const atoms& args = {}) {
 		handle_object_arguments(args);
 	}
 
-	message list_message { this, "list", "Input to easing function.",
+	message<> list_message { this, "list", "Input to easing function.",
 		MIN_FUNCTION {
 			auto	count = args.size();
 			atoms	result(count);

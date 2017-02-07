@@ -1,5 +1,4 @@
 /// @file	
-///	@ingroup 	minexamples
 ///	@copyright	Copyright (c) 2016, Cycling '74
 /// @author		Timothy Place
 ///	@license	Usage of this file and its contents is governed by the MIT License
@@ -14,15 +13,15 @@ public:
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, ease.xfade~, jit.ease, list.ease, line, line~, curve~" };
 	
-	inlet	input	{ this, "(list) new target or origin" };
-	inlet	input2	{ this, "(float) easing function position." };
-	outlet	output	{ this, "(list) eased output " };
+	inlet<>		input	{ this, "(list) new target or origin" };
+	inlet<>		input2	{ this, "(float) easing function position." };
+	outlet<>	output	{ this, "(list) eased output " };
 
 	ease(const atoms& args = {}) {
 		handle_object_arguments(args);
 	}
 
-	message number_message { this, "number", "Normalized transition location.",
+	message<> number_message { this, "number", "Normalized transition location.",
 		MIN_FUNCTION {
 			m_position = args[0];
 			bang();
@@ -30,7 +29,7 @@ public:
 		}
 	};
 
-	message bang { this, "bang", "Output",
+	message<> bang { this, "bang", "Output",
 		MIN_FUNCTION {
 			auto position1 = apply_easing_function(m_position);
 			auto position2 = 1.0 - position1;
@@ -47,7 +46,7 @@ public:
 		}
 	};
 
-	message set_message { this, "set", "Set origin without output.",
+	message<> set_message { this, "set", "Set origin without output.",
 		MIN_FUNCTION {
 			m_origin = from_atoms<std::vector<double>>(args);
 			if (m_origin.size() != m_target.size())
@@ -56,7 +55,7 @@ public:
 		}
 	};
 
-	message list_message { this, "list", "Set new target.",
+	message<> list_message { this, "list", "Set new target.",
 		MIN_FUNCTION {
 			m_origin = m_current;
 			m_target = from_atoms<std::vector<double>>(args);

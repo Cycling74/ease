@@ -1,5 +1,4 @@
 /// @file
-///	@ingroup 	minexamples
 ///	@copyright	Copyright (c) 2016, Cycling '74
 /// @author		Timothy Place
 ///	@license	Usage of this file and its contents is governed by the MIT License
@@ -14,16 +13,16 @@ public:
 	MIN_AUTHOR		{ "Cycling '74" };
 	MIN_RELATED		{ "ease, ease~, list.ease, jit.ease, ease.xfade, line, line~, curve~" };
 
-	inlet	in_position	{ this, "(signal) normalized position" };
-	inlet	in_origin	{ this, "(signal/number) origin" };
-	inlet	in_target	{ this, "(signal/number) target" };
-	outlet	output		{ this, "(signal) current interpolation", "signal" };
+	inlet<>		in_position	{ this, "(signal) normalized position" };
+	inlet<>		in_origin	{ this, "(signal/number) origin" };
+	inlet<>		in_target	{ this, "(signal/number) target" };
+	outlet<>	output		{ this, "(signal) current interpolation", "signal" };
 
 	ease_xfade_tilde(const atoms& args = {}) {
 		handle_object_arguments(args);
 	}
 
-	message number {this, "number", "Set the normalized position in the function.",
+	message<> number {this, "number", "Set the normalized position in the function.",
 		MIN_FUNCTION {
 			switch (current_inlet()) {
 				case 0: break;

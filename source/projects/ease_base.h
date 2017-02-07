@@ -1,5 +1,4 @@
 /// @file	
-///	@ingroup 	minexamples
 ///	@copyright	Copyright (c) 2016, Cycling '74
 /// @author		Timothy Place
 ///	@license	Usage of this file and its contents is governed by the MIT License
