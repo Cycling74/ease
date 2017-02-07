@@ -20,7 +20,7 @@ public:
 		handle_object_arguments(args);
 	}
 
-	message<> list_message { this, "list", "Input to easing function.",
+	message<threadsafe::yes> list_message { this, "list", "Input to easing function.",
 		MIN_FUNCTION {
 			auto	count = args.size();
 			atoms	result(count);

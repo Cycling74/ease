@@ -22,7 +22,7 @@ public:
 		handle_object_arguments(args);
 	}
 
-	message<> number {this, "number", "Set the normalized position in the function.",
+	message<threadsafe::yes> number {this, "number", "Set the normalized position in the function.",
 		MIN_FUNCTION {
 			switch (current_inlet()) {
 				case 0: break;

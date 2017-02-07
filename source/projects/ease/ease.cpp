@@ -20,7 +20,7 @@ public:
 		handle_object_arguments(args);
 	}
 
-	message<> number_message { this, "number", "Input value to easing function.",
+	message<threadsafe::yes> number_message { this, "number", "Input value to easing function.",
 		MIN_FUNCTION {
 			output.send( apply_easing_function(args[0]) );
 			return {};
