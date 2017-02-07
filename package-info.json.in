@@ -1,7 +1,7 @@
 {
 	"author" : "Cycling '74",
 	"description" : "Use easing functions in Max for audio, visuals, and automation.",
-	"homepatcher" : "ease.maxhelp",
+	"homepatcher" : "Easing Functions.maxpat",
 	"max_version_min" : "7.1",
 	"name" : "@C74_PACKAGE_NAME@",
 	"os" : {
@@ -14,11 +14,11 @@
 			"min_version" : "none"
 		}
 	},
-	"package_extra" : { 
+	"package_extra" : {
 		"reverse_domain" : "com.cycling74",
 		"copyright" : "Copyright (c) 2016 Cycling '74"
 	},
 	"tags" : [ ],
 	"version" : "@GIT_VERSION_MAJ@.@GIT_VERSION_MIN@.@GIT_VERSION_SUB@",
-	"website" : "http://www.github.com/Cycling74/ease"
+	"website" : "http://cycling74.com"
 }
