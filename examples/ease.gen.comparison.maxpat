@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 3,
+			"revision" : 1,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 84.0, 1334.0, 765.0 ],
+		"rect" : [ 38.0, 84.0, 1314.0, 942.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -17,8 +17,8 @@
 		"default_fontname" : "Arial",
 		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
+		"gridsnaponopen" : 2,
+		"objectsnaponopen" : 0,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"lefttoolbarpinned" : 0,
@@ -38,142 +38,39 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontsize" : 18.0,
-					"id" : "obj-10",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 144.0, 16.0, 446.0, 27.0 ],
-					"style" : "",
-					"text" : "Original source: https://github.com/warrenm/AHEasing",
-					"textcolor" : [ 0.552941, 0.278431, 0.552941, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"format" : 6,
-					"id" : "obj-9",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 556.0, 161.0, 50.0, 22.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 556.0, 123.0, 83.0, 22.0 ],
-					"style" : "",
-					"text" : "snapshot~ 10"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-102",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-105",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-108",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-109",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-110",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-111",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-112",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -186,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1019.0, 699.0, 167.0, 22.0 ],
+					"patching_rect" : [ 1015.0, 606.0, 167.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BackEaseInOut.gendsp"
 				}
@@ -194,13 +91,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-114",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -213,7 +136,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 832.0, 699.0, 157.0, 22.0 ],
+					"patching_rect" : [ 828.0, 606.0, 157.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BackEaseOut.gendsp"
 				}
@@ -228,21 +151,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 663.0, 74.0, 22.0 ],
+					"patching_rect" : [ 641.0, 570.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-117",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 645.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 641.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -252,10 +201,10 @@
 					"fontsize" : 12.0,
 					"id" : "obj-118",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 699.0, 148.0, 22.0 ],
+					"patching_rect" : [ 641.0, 606.0, 148.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BackEaseIn.gendsp"
 				}
@@ -263,97 +212,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-99",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-100",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-101",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-119",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-120",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-121",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-122",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -366,7 +257,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1019.0, 909.0, 181.0, 22.0 ],
+					"patching_rect" : [ 1015.0, 786.0, 181.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BounceEaseInOut.gendsp"
 				}
@@ -374,13 +265,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-124",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -393,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 832.0, 909.0, 171.0, 22.0 ],
+					"patching_rect" : [ 828.0, 786.0, 171.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BounceEaseOut.gendsp"
 				}
@@ -408,21 +325,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 873.0, 74.0, 22.0 ],
+					"patching_rect" : [ 641.0, 750.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-127",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 645.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 641.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -435,7 +378,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 909.0, 162.0, 22.0 ],
+					"patching_rect" : [ 641.0, 786.0, 162.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ BounceEaseIn.gendsp"
 				}
@@ -443,97 +386,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-49",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-50",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-51",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-52",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-53",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 950.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-129",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 1036.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-130",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 389.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -546,7 +431,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 393.0, 909.0, 176.0, 22.0 ],
+					"patching_rect" : [ 389.0, 786.0, 176.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ElasticEaseInOut.gendsp"
 				}
@@ -554,13 +439,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-132",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 202.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -573,7 +484,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 206.0, 909.0, 166.0, 22.0 ],
+					"patching_rect" : [ 202.0, 786.0, 166.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ElasticEaseOut.gendsp"
 				}
@@ -588,21 +499,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 873.0, 74.0, 22.0 ],
+					"patching_rect" : [ 15.0, 750.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-135",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 937.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 814.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -615,7 +552,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 909.0, 156.0, 22.0 ],
+					"patching_rect" : [ 15.0, 786.0, 156.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ElasticEaseIn.gendsp"
 				}
@@ -623,97 +560,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-137",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-138",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-139",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-140",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-141",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 740.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-142",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 826.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-143",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 389.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -726,7 +605,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 393.0, 699.0, 182.0, 22.0 ],
+					"patching_rect" : [ 389.0, 606.0, 182.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CircularEaseInOut.gendsp"
 				}
@@ -734,13 +613,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-145",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 202.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -753,7 +658,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 206.0, 699.0, 172.0, 22.0 ],
+					"patching_rect" : [ 202.0, 606.0, 172.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CircularEaseOut.gendsp"
 				}
@@ -768,21 +673,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 663.0, 74.0, 22.0 ],
+					"patching_rect" : [ 15.0, 570.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-148",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 727.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 634.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -795,7 +726,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 699.0, 162.0, 22.0 ],
+					"patching_rect" : [ 15.0, 606.0, 162.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CircularEaseIn.gendsp"
 				}
@@ -803,97 +734,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-72",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-75",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-78",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-81",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-84",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-87",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-88",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 389.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -906,7 +779,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 393.0, 489.0, 179.0, 22.0 ],
+					"patching_rect" : [ 389.0, 426.0, 179.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuarticEaseInOut.gendsp"
 				}
@@ -914,13 +787,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-90",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 202.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -933,7 +832,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 206.0, 489.0, 169.0, 22.0 ],
+					"patching_rect" : [ 202.0, 426.0, 169.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuarticEaseOut.gendsp"
 				}
@@ -948,21 +847,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 453.0, 74.0, 22.0 ],
+					"patching_rect" : [ 15.0, 390.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-93",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -975,7 +900,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 489.0, 160.0, 22.0 ],
+					"patching_rect" : [ 15.0, 426.0, 160.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuarticEaseIn.gendsp"
 				}
@@ -983,97 +908,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-32",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-33",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-34",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-35",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-36",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 530.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-39",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 616.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-45",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1086,7 +953,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1019.0, 489.0, 178.0, 22.0 ],
+					"patching_rect" : [ 1015.0, 426.0, 178.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuinticEaseInOut.gendsp"
 				}
@@ -1094,13 +961,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-54",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1113,7 +1006,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 832.0, 489.0, 168.0, 22.0 ],
+					"patching_rect" : [ 828.0, 426.0, 168.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuinticEaseOut.gendsp"
 				}
@@ -1128,21 +1021,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 453.0, 74.0, 22.0 ],
+					"patching_rect" : [ 641.0, 390.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-66",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 645.0, 517.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 641.0, 454.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1155,7 +1074,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 489.0, 158.0, 22.0 ],
+					"patching_rect" : [ 641.0, 426.0, 158.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuinticEaseIn.gendsp"
 				}
@@ -1163,349 +1082,39 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-106",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-107",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-103",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-104",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 149.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-97",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-98",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-94",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-95",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-85",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-86",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-82",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-83",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-79",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-80",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-76",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-77",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-73",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-74",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-70",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-71",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 962.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-67",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 320.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-68",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 406.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-64",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 110.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-65",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1149.0, 196.0, 19.0, 20.0 ],
-					"style" : "",
-					"text" : "0"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-55",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1518,7 +1127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1019.0, 279.0, 171.0, 22.0 ],
+					"patching_rect" : [ 1015.0, 246.0, 171.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CubicEaseInOut.gendsp"
 				}
@@ -1526,13 +1135,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-58",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1545,7 +1180,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 832.0, 279.0, 161.0, 22.0 ],
+					"patching_rect" : [ 828.0, 246.0, 161.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CubicEaseOut.gendsp"
 				}
@@ -1560,21 +1195,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 243.0, 74.0, 22.0 ],
+					"patching_rect" : [ 641.0, 210.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-61",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 645.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 641.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1587,7 +1248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 279.0, 152.0, 22.0 ],
+					"patching_rect" : [ 641.0, 246.0, 152.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ CubicEaseIn.gendsp"
 				}
@@ -1595,13 +1256,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-37",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 389.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1614,7 +1301,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 393.0, 279.0, 203.0, 22.0 ],
+					"patching_rect" : [ 389.0, 246.0, 203.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ExponentialEaseInOut.gendsp"
 				}
@@ -1622,13 +1309,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-40",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 202.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1641,7 +1354,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 206.0, 279.0, 193.0, 22.0 ],
+					"patching_rect" : [ 202.0, 246.0, 193.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ExponentialEaseOut.gendsp"
 				}
@@ -1656,21 +1369,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 243.0, 74.0, 22.0 ],
+					"patching_rect" : [ 15.0, 210.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-43",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 307.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 274.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1683,7 +1422,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 279.0, 184.0, 22.0 ],
+					"patching_rect" : [ 15.0, 246.0, 184.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ ExponentialEaseIn.gendsp"
 				}
@@ -1691,13 +1430,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-19",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1019.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1015.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1710,7 +1475,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1019.0, 69.0, 192.0, 22.0 ],
+					"patching_rect" : [ 1015.0, 66.0, 192.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuadraticEaseInOut.gendsp"
 				}
@@ -1718,13 +1483,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-22",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1737,7 +1528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 832.0, 69.0, 182.0, 22.0 ],
+					"patching_rect" : [ 828.0, 66.0, 182.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ QuadraticEaseOut.gendsp"
 				}
@@ -1752,21 +1543,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 645.0, 33.0, 74.0, 22.0 ],
+					"patching_rect" : [ 641.0, 30.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-25",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 645.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 641.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1783,9 +1600,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 2,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 3,
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1908,7 +1725,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 645.0, 69.0, 204.0, 22.0 ],
+					"patching_rect" : [ 641.0, 66.0, 204.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ @file QuadraticEaseIn.gendsp"
 				}
@@ -1916,13 +1733,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-13",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 389.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1935,7 +1778,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 393.0, 69.0, 164.0, 22.0 ],
+					"patching_rect" : [ 389.0, 66.0, 164.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ SineEaseInOut.gendsp"
 				}
@@ -1943,13 +1786,39 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-7",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 202.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -1962,7 +1831,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 206.0, 69.0, 154.0, 22.0 ],
+					"patching_rect" : [ 202.0, 66.0, 154.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ SineEaseOut.gendsp"
 				}
@@ -1977,21 +1846,47 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 33.0, 74.0, 22.0 ],
+					"patching_rect" : [ 15.0, 30.0, 78.0, 22.0 ],
 					"style" : "",
-					"text" : "phasor~ 1"
+					"text" : "phasor~ 100"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.322969, 0.31519, 0.325025, 1.0 ],
+					"gridcolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
+					"gridorigincolor" : [ 0.45098, 0.513725, 0.521569, 1.0 ],
 					"id" : "obj-5",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 97.0, 130.0, 130.0 ],
-					"range" : [ -0.2, 1.2 ],
-					"style" : ""
+					"margins" : [ 1.0, 0.0, 1.0, 25.0 ],
+					"maxclass" : "plot~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"numpoints" : 441,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 94.0, 125.0, 101.0 ],
+					"prototypename" : "Audio Scope - Light",
+					"subplots" : [ 						{
+							"color" : [ 0.1, 0.9, 0.1, 1.0 ],
+							"thickness" : 1.2,
+							"point_style" : "none",
+							"line_style" : "lines",
+							"number_style" : "none",
+							"filter" : "none",
+							"domain_start" : 0.0,
+							"domain_end" : 1.0,
+							"domain_style" : "linear",
+							"domain_markers" : [ 0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0 ],
+							"domain_labels" : [  ],
+							"range_start" : -0.3,
+							"range_end" : 1.3,
+							"range_style" : "linear",
+							"range_markers" : [ 0.0, 0.25, 0.75, 1.0 ],
+							"range_labels" : [ 0.0, "0.0", 1.0, "1.0 " ],
+							"origin_x" : 0.0,
+							"origin_y" : 0.0
+						}
+ ]
 				}
 
 			}
@@ -2015,7 +1910,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 19.0, 69.0, 145.0, 22.0 ],
+					"patching_rect" : [ 15.0, 66.0, 145.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~ SineEaseIn.gendsp"
 				}
@@ -2054,7 +1949,7 @@
 					"destination" : [ "obj-113", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 690.5, 1028.5, 690.5 ],
+					"midpoints" : [ 650.5, 597.5, 1024.5, 597.5 ],
 					"source" : [ "obj-116", 0 ]
 				}
 
@@ -2064,7 +1959,7 @@
 					"destination" : [ "obj-115", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 690.5, 841.5, 690.5 ],
+					"midpoints" : [ 650.5, 597.5, 837.5, 597.5 ],
 					"source" : [ "obj-116", 0 ]
 				}
 
@@ -2110,7 +2005,7 @@
 					"destination" : [ "obj-123", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 900.5, 1028.5, 900.5 ],
+					"midpoints" : [ 650.5, 777.5, 1024.5, 777.5 ],
 					"source" : [ "obj-126", 0 ]
 				}
 
@@ -2120,7 +2015,7 @@
 					"destination" : [ "obj-125", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 900.5, 841.5, 900.5 ],
+					"midpoints" : [ 650.5, 777.5, 837.5, 777.5 ],
 					"source" : [ "obj-126", 0 ]
 				}
 
@@ -2166,7 +2061,7 @@
 					"destination" : [ "obj-131", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 900.5, 402.5, 900.5 ],
+					"midpoints" : [ 24.5, 777.5, 398.5, 777.5 ],
 					"source" : [ "obj-134", 0 ]
 				}
 
@@ -2176,7 +2071,7 @@
 					"destination" : [ "obj-133", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 900.5, 215.5, 900.5 ],
+					"midpoints" : [ 24.5, 777.5, 211.5, 777.5 ],
 					"source" : [ "obj-134", 0 ]
 				}
 
@@ -2210,15 +2105,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-143", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2240,7 +2126,7 @@
 					"destination" : [ "obj-144", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 690.5, 402.5, 690.5 ],
+					"midpoints" : [ 24.5, 597.5, 398.5, 597.5 ],
 					"source" : [ "obj-147", 0 ]
 				}
 
@@ -2250,7 +2136,7 @@
 					"destination" : [ "obj-146", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 690.5, 215.5, 690.5 ],
+					"midpoints" : [ 24.5, 597.5, 211.5, 597.5 ],
 					"source" : [ "obj-147", 0 ]
 				}
 
@@ -2270,15 +2156,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-149", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -2305,7 +2182,7 @@
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 60.5, 1028.5, 60.5 ],
+					"midpoints" : [ 650.5, 57.5, 1024.5, 57.5 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -2315,7 +2192,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 60.5, 841.5, 60.5 ],
+					"midpoints" : [ 650.5, 57.5, 837.5, 57.5 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -2361,7 +2238,7 @@
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 270.5, 402.5, 270.5 ],
+					"midpoints" : [ 24.5, 237.5, 398.5, 237.5 ],
 					"source" : [ "obj-42", 0 ]
 				}
 
@@ -2371,7 +2248,7 @@
 					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 270.5, 215.5, 270.5 ],
+					"midpoints" : [ 24.5, 237.5, 211.5, 237.5 ],
 					"source" : [ "obj-42", 0 ]
 				}
 
@@ -2444,7 +2321,7 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 60.5, 402.5, 60.5 ],
+					"midpoints" : [ 24.5, 57.5, 398.5, 57.5 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -2454,7 +2331,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 60.5, 215.5, 60.5 ],
+					"midpoints" : [ 24.5, 57.5, 211.5, 57.5 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -2464,7 +2341,7 @@
 					"destination" : [ "obj-56", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 270.5, 1028.5, 270.5 ],
+					"midpoints" : [ 650.5, 237.5, 1024.5, 237.5 ],
 					"source" : [ "obj-60", 0 ]
 				}
 
@@ -2474,7 +2351,7 @@
 					"destination" : [ "obj-59", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 270.5, 841.5, 270.5 ],
+					"midpoints" : [ 650.5, 237.5, 837.5, 237.5 ],
 					"source" : [ "obj-60", 0 ]
 				}
 
@@ -2502,7 +2379,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 480.5, 1028.5, 480.5 ],
+					"midpoints" : [ 650.5, 417.5, 1024.5, 417.5 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
@@ -2512,7 +2389,7 @@
 					"destination" : [ "obj-57", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.5, 480.5, 841.5, 480.5 ],
+					"midpoints" : [ 650.5, 417.5, 837.5, 417.5 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
@@ -2567,7 +2444,7 @@
 					"destination" : [ "obj-89", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 480.5, 402.5, 480.5 ],
+					"midpoints" : [ 24.5, 417.5, 398.5, 417.5 ],
 					"source" : [ "obj-92", 0 ]
 				}
 
@@ -2577,7 +2454,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 28.5, 480.5, 215.5, 480.5 ],
+					"midpoints" : [ 24.5, 417.5, 211.5, 417.5 ],
 					"source" : [ "obj-92", 0 ]
 				}
 
@@ -2603,204 +2480,169 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "SineEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "SineEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "SineEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuadraticEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuadraticEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ExponentialEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ExponentialEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ExponentialEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CubicEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CubicEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CubicEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuinticEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuinticEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuinticEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuarticEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuarticEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "QuarticEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CircularEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CircularEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "CircularEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ElasticEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ElasticEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ElasticEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BounceEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BounceEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BounceEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
-				"type" : "gDSP",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "BackEaseIn.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BackEaseOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BackEaseInOut.gendsp",
-				"bootpath" : "~/Desktop/CodeBoxEasing-in-genexpr",
-				"patcherrelativepath" : "../../../../../../Desktop/CodeBoxEasing-in-genexpr",
+				"bootpath" : "~/Materials/ease/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
