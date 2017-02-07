@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 0,
-			"architecture" : "x86",
+			"revision" : 1,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -49,8 +49,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -121,8 +121,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -196,7 +196,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 170.0, 155.0, 205.0, 40.0 ],
+									"patching_rect" : [ 190.0, 165.0, 208.0, 40.0 ],
 									"style" : "",
 									"text" : "double-click to see the effect of different ease functions",
 									"textjustification" : 2
@@ -304,8 +304,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 0,
-											"architecture" : "x86",
+											"revision" : 1,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -424,7 +424,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 65.0, 520.0, 65.0, 35.0 ],
+									"patching_rect" : [ 65.0, 520.0, 67.0, 35.0 ],
 									"style" : "",
 									"text" : "jit.matrix 3 float32 5 5"
 								}
@@ -487,13 +487,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "" ],
-									"patching_rect" : [ 40.0, 164.320007, 125.0, 22.0 ],
+									"patching_rect" : [ 40.0, 164.320007, 140.0, 35.0 ],
 									"style" : "",
-									"text" : "jit.world @enable 1"
+									"text" : "jit.world @enable 1 @windowposition 10 50"
 								}
 
 							}
@@ -557,7 +558,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 40.0, 135.0, 125.0, 25.0 ],
+									"patching_rect" : [ 40.0, 135.0, 126.0, 25.0 ],
 									"style" : ""
 								}
 
@@ -574,7 +575,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 151.917084, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 151.917068, 57.567627 ]
 								}
 
 							}
@@ -592,7 +593,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 380.0, 165.0, 20.0, 20.0 ],
+									"patching_rect" : [ 400.0, 175.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"style" : "",
 									"text" : "1",
@@ -845,8 +846,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -903,7 +904,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 590.0, 100.0, 120.0, 25.0 ],
-									"presentation_rect" : [ 589.0, 96.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Play a movie"
 								}
@@ -934,31 +934,33 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u937001116" ],
 													"dim" : [ 1, 1 ],
-													"usedstrect" : [ 0 ],
-													"moviefile" : [ "" ],
-													"rate" : [ 1.0 ],
-													"position" : [ 0.0 ],
-													"texture_name" : [ "u551001114" ],
-													"dstrect" : [ 0, 0, 1, 1 ],
-													"vol" : [ 1.0 ],
-													"loopreport" : [ 0 ],
-													"unique" : [ 0 ],
-													"colormode" : [ "argb" ],
-													"adapt" : [ 1 ],
-													"framereport" : [ 0 ],
-													"drawto" : [ "" ],
 													"time" : [ 0 ],
-													"loopstart" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
-													"usesrcrect" : [ 0 ],
-													"engine" : [ "avf" ],
-													"automatic" : [ 0 ],
+													"moviefile" : [ "" ],
+													"loopend" : [ 0 ],
 													"output_texture" : [ 0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
+													"drawto" : [ "" ],
+													"usedstrect" : [ 0 ],
+													"adapt" : [ 1 ],
 													"autostart" : [ 1 ],
-													"time_secs" : [ 0.0 ],
+													"position" : [ 0.0 ],
+													"engine" : [ "avf" ],
+													"loopstart" : [ 0 ],
+													"duration" : [ 0 ],
+													"usesrcrect" : [ 0 ],
+													"vol" : [ 1.0 ],
+													"colormode" : [ "argb" ],
+													"rate" : [ 1.0 ],
+													"unique" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"looppoints" : [ 0, 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ],
 													"interp" : [ 0 ],
-													"loopend" : [ 0 ]
+													"time_secs" : [ 0.0 ],
+													"window" : [ "" ],
+													"framereport" : [ 0 ],
+													"automatic" : [ 0 ],
+													"loopreport" : [ 0 ],
+													"texture_name" : [ "u551001114" ]
 												}
 
 											}
@@ -1061,7 +1063,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 151.917084, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 151.917068, 57.567627 ]
 								}
 
 							}
@@ -1102,7 +1104,6 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 713.0, 102.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 714.0, 106.0, 0.0, 0.0 ],
 									"rounded" : 60.0,
 									"style" : "",
 									"text" : "1",
@@ -1194,8 +1195,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,

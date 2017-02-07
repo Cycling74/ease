@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 0,
-			"architecture" : "x86",
+			"revision" : 1,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -49,8 +49,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -97,7 +97,6 @@
 					}
 ,
 					"patching_rect" : [ 90.0, 200.0, 27.0, 22.0 ],
-					"presentation_rect" : [ 89.0, 208.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -122,12 +121,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 753.0, 724.0 ],
+						"rect" : [ 100.0, 126.0, 753.0, 724.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -183,7 +182,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 115.0, 330.0, 166.0, 54.0 ],
+									"patching_rect" : [ 90.0, 330.0, 166.0, 54.0 ],
 									"style" : "",
 									"text" : "double-click to see the effect of different ease functions",
 									"textjustification" : 2
@@ -260,7 +259,7 @@
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "ease.chooser.maxpat",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
@@ -440,8 +439,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 3,
-											"revision" : 0,
-											"architecture" : "x86",
+											"revision" : 1,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -613,13 +612,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-3",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "" ],
-									"patching_rect" : [ 285.0, 345.0, 113.0, 22.0 ],
+									"patching_rect" : [ 260.0, 340.0, 140.0, 35.0 ],
 									"style" : "",
-									"text" : "jit.world @enable 1"
+									"text" : "jit.world @enable 1 @windowposition 10 50"
 								}
 
 							}
@@ -791,7 +791,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 95.0, 345.0, 20.0, 20.0 ],
+									"patching_rect" : [ 70.0, 345.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"style" : "",
 									"text" : "3",
@@ -1103,8 +1103,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1340,7 +1340,7 @@
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "ease.chooser.maxpat",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
@@ -1651,12 +1651,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 0,
-							"architecture" : "x86",
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 753.0, 724.0 ],
+						"rect" : [ 0.0, 26.0, 753.0, 724.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
