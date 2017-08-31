@@ -13,5 +13,5 @@ The Ease package is licensed under the terms of the MIT license. Please see the 
 
 ## Support
 
-For support, please use the developer forums at:
+For support, please use the Max forums at:
 http://cycling74.com/forums/
