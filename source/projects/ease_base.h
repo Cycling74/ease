@@ -17,7 +17,7 @@ public:
 	argument<number> outlow_arg		{ this, "output_range[low]", "Initial low value for the output range." };
 	argument<number> outhigh_arg	{ this, "output_range[high]", "Initial high value for the output range." };
 
-	attribute<easing::function> easing_function { this, "function", easing::function::linear, easing::function_info,
+	attribute<lib::easing::function> easing_function { this, "function", lib::easing::function::linear, lib::easing::function_info,
 		description { "Easing function to be applied or generated." }
 	};
 
@@ -109,7 +109,7 @@ protected:
 		number diff = (input_range[1] - input_range[0]);
 		number scale = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
 		number x = (input - input_range[0]) * scale;
-		number y = easing::apply(easing_function, x);
+		number y = lib::easing::apply(easing_function, x);
 
 		return (y * (output_range[1] - output_range[0])) + output_range[0];
 	}

@@ -5,7 +5,7 @@
 
 #include "../ease_base.h"
 
-class ease : public ease_base<ease>, public matrix_operator {
+class ease : public ease_base<ease>, public matrix_operator<> {
 public:
 
 	MIN_DESCRIPTION { "Generate or apply an easing function." };
@@ -24,7 +24,7 @@ public:
 	cell<matrix_type,planecount> calc_cell(cell<matrix_type,planecount> input, const matrix_info& info, matrix_coord& position) {
 		cell<matrix_type,planecount> output;
 
-		for (auto plane=0; plane<info.planecount(); ++plane)
+		for (auto plane=0; plane<info.plane_count(); ++plane)
 			output[plane] = apply_easing_function(input[plane]);
 		return output;
 	}
