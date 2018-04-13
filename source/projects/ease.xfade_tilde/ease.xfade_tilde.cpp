@@ -24,7 +24,7 @@ public:
 
 	message<threadsafe::yes> number {this, "number", "Set the normalized position in the function.",
 		MIN_FUNCTION {
-			switch (current_inlet()) {
+			switch (inlet) {
 				case 0: break;
 				case 1: m_origin = args[0]; break;
 				case 2: m_target = args[0]; break;
