@@ -64,12 +64,12 @@ deploy:
   provider: s3
   access_key_id: AKIAJ4NHY5NBHT76DRGA
   secret_access_key:
-    secure: "qjpFRGnUoivaWGQWZBYrgoG92N+qYL/SjNwQIfatMGFzKsso7TS33lqljIrVTh9WSOoLBRV5p9m+480ezrC/JvDtVGB9D6WDcG9QMfTEhLbZ4l6ege2C0waYSABhNChOgl7VgbmVX8V+J3r4THxGLBWmnjX4c8bUIwaY4iL8q+8EaMzswx+1ONkTfzMb1DFSP3dAUA3MkAYhLuh9kxZY0vW8FecoA5MlT/9iIfbmsBPbqsxx+HywtA0ktapTVb3DBUyo110QcaGgDyQ48LURp09n1jlo6nVO4f5VfO0durEsQ2Sv2QewtRvcGH7le3R8NwdvYmsEIi/s/hXYHmDB1dz+XPSG286ZOW3QjVts5fbrxzNhXvpr5g7d+J9aUP0MBbbNKjScFJacpRiL8QYZjtYexL7MiksQlJkURY/u6TYLPTcoDJxN2xY2rQp04aQioX/pYzcDlyAV2vItjyKmelkscrwZBuWaurX08iCvGGJKXd7Tx7hmQp46vmQbM8wxx+BUK/+if6eb7c2rMXlTUtTiRndgX6AzW7dQtX31qX+hfjINhgZ+NGJ2kM3gIgyyJEDDQZYjCkAW6Kh/smCen+t+FZehk/jquXPlubw82DVTJNHMY27yI3gpWnKLCwZoBPwjX23q1S0CtZKXP6BEZsKeYHwLkJJtpj4SWFEVUcA="
+    secure: "qUgZI5hbLg+F3bLG38O+FX0G1POr38AesId9O2hSPWihe0iK5DMD5UZy69hZrRWLiBRzKYKjIFuj64KQGtJKHzsxJRSGe4dv0CMpkRT6dHt/fR6z6gRX+48IqGjVrSMNTA5nZu8Ge/wLwa/DBrte0E+UvbZb6QnQD9iH+vyp5mPmFU7AP8KWLjkuk6bslWfYbaDWrX+9uzpAqjC9sFzBS1+U9XNl71QzsSWfmbVXqgRrUdp1gNDQqEmsPEAobFK3jSjIjyONz2XjwwM73wIH6fXwCWfG/YL6+BHkkBYmyv56+0P4iPbIrpGw7SNO7mZ3Bmkpuo/22AGHtk4CO90GlaDBfA5mxJSaJDqslcKVLeu9oLxhTbQMK3VfaByu9RbKfDgAeQxgpqbfcRf8O3GJpY1/LUQCDQjOn84U0wUPGAfdKPwUngWtQtTWN1+/OceT49n0BlmM7lkDubaqf6KTaw+dJhSK8A1Ag1HSLx3w+joQfQDqv7Dogb6i4HwMY2oVzSdqVMxSvYQSEF1jo+rc4gMNawxS3OS60i0kJ7llc2Jpl+HYtEiJuOyka1t3Z92AM6drQ4Gw/0oqAljxt38T3a9ArRnSa9O4KO6CfV3s2b/XBdQwrgQPO/U+17kOBKZEyxnsW5Ki/mxpWZspa0oiWamPou/ZNyG2CJtEO63tOIU="
   bucket: cycling74-ci-public
   skip_cleanup: true
   local-dir: dist
-  upload-dir: min-devkit
+  upload-dir: $PACKAGE_NAME
   acl: public_read
   on:
-    repo: Cycling74/ease
+    repo: Cycling74/$PACKAGE_NAME
     all_branches: true
