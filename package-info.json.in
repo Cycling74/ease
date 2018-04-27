@@ -1,7 +1,7 @@
 {
 	"author" : "Cycling '74",
-	"description" : "Use easing functions in Max for audio, visuals, and automation.",
-	"homepatcher" : "Easing Functions.maxpat",
+	"description" : "Lightweight reference implementation of a package built using the Min-API.",
+	"homepatcher" : "Min Object Development Kit.maxpat",
 	"max_version_min" : "7.1", "max_version_max" : "none",
 	"name" : "@C74_PACKAGE_NAME@",
 	"os" : {
@@ -20,5 +20,5 @@
 	},
 	"tags" : [ ],
 	"version" : "@GIT_VERSION_MAJ@.@GIT_VERSION_MIN@.@GIT_VERSION_SUB@",
-	"website" : "http://cycling74.com"
+	"website" : "http://www.github.com/Cycling74/min-devkit"
 }
