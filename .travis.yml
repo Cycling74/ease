@@ -71,5 +71,5 @@ deploy:
   upload-dir: min-devkit
   acl: public_read
   on:
-    repo: Cycling74/min-devkit
+    repo: Cycling74/ease
     all_branches: true
