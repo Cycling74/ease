@@ -10,16 +10,6 @@ os: osx
 
 matrix:
   include:
-    - osx_image: xcode7.3
-      env: CONFIG=Debug
-    - osx_image: xcode7.3
-      env: CONFIG=Release
-    - osx_image: xcode8.3
-      env: CONFIG=Debug
-    - osx_image: xcode8.3
-      env: CONFIG=Release
-    - osx_image: xcode9
-      env: CONFIG=Debug
     - osx_image: xcode9
       env: CONFIG=Release
 
@@ -64,7 +54,7 @@ deploy:
   provider: s3
   access_key_id: AKIAJ4NHY5NBHT76DRGA
   secret_access_key:
-    secure: "qUgZI5hbLg+F3bLG38O+FX0G1POr38AesId9O2hSPWihe0iK5DMD5UZy69hZrRWLiBRzKYKjIFuj64KQGtJKHzsxJRSGe4dv0CMpkRT6dHt/fR6z6gRX+48IqGjVrSMNTA5nZu8Ge/wLwa/DBrte0E+UvbZb6QnQD9iH+vyp5mPmFU7AP8KWLjkuk6bslWfYbaDWrX+9uzpAqjC9sFzBS1+U9XNl71QzsSWfmbVXqgRrUdp1gNDQqEmsPEAobFK3jSjIjyONz2XjwwM73wIH6fXwCWfG/YL6+BHkkBYmyv56+0P4iPbIrpGw7SNO7mZ3Bmkpuo/22AGHtk4CO90GlaDBfA5mxJSaJDqslcKVLeu9oLxhTbQMK3VfaByu9RbKfDgAeQxgpqbfcRf8O3GJpY1/LUQCDQjOn84U0wUPGAfdKPwUngWtQtTWN1+/OceT49n0BlmM7lkDubaqf6KTaw+dJhSK8A1Ag1HSLx3w+joQfQDqv7Dogb6i4HwMY2oVzSdqVMxSvYQSEF1jo+rc4gMNawxS3OS60i0kJ7llc2Jpl+HYtEiJuOyka1t3Z92AM6drQ4Gw/0oqAljxt38T3a9ArRnSa9O4KO6CfV3s2b/XBdQwrgQPO/U+17kOBKZEyxnsW5Ki/mxpWZspa0oiWamPou/ZNyG2CJtEO63tOIU="
+    secure: "XwNoItI+Hy4MTygFGYCuiLZIjN2lDLCoa/uE16SeANkhlh7j+nSls67TbK23k9Z0Fh+X2E+Delv3glaPBsVmiXTxjJJNDmTq4fI3D7xGou5QcLg5c6RzO3MHsxcFr2aDZw5PqWJDWg8IWkL7GKJcyoHofIblsDt9nYJYe1nagDO4SBESXQqu9MJQJnz1Z33s2R6MhIvOOo9xCHYqcOF/Bf8I3tXgIzXKXC0ndVeQkdseyFXKH48lApjAy/Xmtx3YTOzss7ICLjUVGO72PpNKG73paBu1SB0tFb9JkkhLm6Wg00ByvNX2Dtpb4jUzhcXoKLYVI9xraicDvnJhSEilv7IRzvWIaaTk5EkxtFTRI9wqA8FtjRyzQJMo87TodcBGZEkkpyV6lIzpQnsZn3WtHagOQbOEdnpQNsUUqrvHT8lCJp4ekFqsFcIC4K8KTEgN/2sBjGrWba2xnEtRZIQmnE9jZZytW19HFyog3HdVFFAPuRbR/0vZ9eCXgmxEcl0o90Xo5xVaoq1GLtcU5bpMI8dvD4b7roNG/gQlgZsbDHaLIn2LYICzfSC6Z21O3Vn76ZF6E3iYsBcr/rNCXwibHhzI7/IEV92yCVjiKdQuCg0th5W9s5S3Q9iOBnHtv0a9DsbZGueYKb998v9DMZVNoAnCssvThfmQ9ACz/SpVZT4="
   bucket: cycling74-ci-public
   skip_cleanup: true
   local-dir: dist
