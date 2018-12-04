@@ -1,0 +1,2 @@
+max objectfile mc.ease~ mc.wrapper~ ease~ mc;
+max objectfile mc.ease.xfade~ mc.wrapper~ ease.xfade~ mc;
