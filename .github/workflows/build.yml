@@ -34,9 +34,12 @@ jobs:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
       run: bash script/package.sh
-      
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: upload
+      uses: actions/checkout@master
+      uses: shallwefootball/s3-upload-action@master
+      with:
+        aws_key_id: ${{ secrets.S3_ID }}
+        aws_secret_access_key: ${{ secrets.S3_KEY }}
+        aws_bucket: cycling74-ci-public
+        source_dir: 'dist'
+  
