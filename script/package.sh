@@ -1,7 +1,7 @@
 #!/bin/sh
 
-PACKAGE_NAME=`echo $TRAVIS_REPO_SLUG | sed 's/.*\///g'`
-PACKAGE_REV=`echo $TRAVIS_COMMIT | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
+PACKAGE_NAME=`echo ${{ github.repository }} | sed 's/.*\///g'`
+PACKAGE_REV=`echo ${{ github.sha }} | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
 mkdir $PACKAGE_NAME
 if [ -e package-info.json ]; then cp package-info.json $PACKAGE_NAME; fi
 for f in *.md; do [ -e "$f" ] && cp "$f" $PACKAGE_NAME ; done
