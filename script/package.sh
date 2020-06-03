@@ -28,4 +28,4 @@ if [ -d tests ]; then cp -r tests $PACKAGE_NAME; fi
 if [ -e $PACKAGE_NAME/ReadMe-Public.md ]; then rm -f $PACKAGE_NAME/ReadMe.md; mv $PACKAGE_NAME/ReadMe-Public.md $PACKAGE_NAME/ReadMe.md; fi
 mkdir dist
 CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
-zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
+
