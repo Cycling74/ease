@@ -39,7 +39,7 @@ jobs:
       run: bash script/package.sh
     - name: compress_macos
       if: matrix.os == 'macos-latest'
-      run: zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
+      run: zip -r dist/${{env.PACKAGE_NAME}}-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
     - name: compress_windows
       if: matrix.os == 'windows-latest'
       run: 7z a dist/$PACKAGE_NAME-win-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME    
