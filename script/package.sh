@@ -1,7 +1,7 @@
 #!/bin/sh
 
-PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
-PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
+export PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
+export PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
 mkdir $PACKAGE_NAME
 if [ -e package-info.json ]; then cp package-info.json $PACKAGE_NAME; fi
 for f in *.md; do [ -e "$f" ] && cp "$f" $PACKAGE_NAME ; done
@@ -27,5 +27,5 @@ if [ -d source ]; then cp -r source $PACKAGE_NAME; fi
 if [ -d tests ]; then cp -r tests $PACKAGE_NAME; fi
 if [ -e $PACKAGE_NAME/ReadMe-Public.md ]; then rm -f $PACKAGE_NAME/ReadMe.md; mv $PACKAGE_NAME/ReadMe-Public.md $PACKAGE_NAME/ReadMe.md; fi
 mkdir dist
-CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
+export CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
 
