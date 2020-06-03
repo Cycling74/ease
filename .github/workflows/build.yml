@@ -69,6 +69,7 @@ jobs:
         zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
     - name: package_windows
       if: matrix.os == 'windows-latest'
+      shell: cmd
       run: |
         set PACKAGE_NAME=`echo ${{ github.repository }} | sed 's/.*\///g'`
         set PACKAGE_REV=`echo ${{ github.sha }} | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
