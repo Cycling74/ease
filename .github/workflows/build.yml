@@ -66,13 +66,30 @@ jobs:
         if [ -e $PACKAGE_NAME/ReadMe-Public.md ]; then rm -f $PACKAGE_NAME/ReadMe.md; mv $PACKAGE_NAME/ReadMe-Public.md $PACKAGE_NAME/ReadMe.md; fi
         mkdir dist
         CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
-        zip -r dist/${{env.PACKAGE_NAME}}-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
+        zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
     - name: package_windows
       if: matrix.os == 'windows-latest'
       run: |
-        PACKAGE_NAME=`echo ${{ github.repository }} | sed 's/.*\///g'`
-        PACKAGE_REV=`echo ${{ github.sha }} | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
-        CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
+        set PACKAGE_NAME=`echo ${{ github.repository }} | sed 's/.*\///g'`
+        set PACKAGE_REV=`echo ${{ github.sha }} | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
+        mkdir %APPVEYOR_PROJECT_NAME%
+        if exist docs cp -r docs %APPVEYOR_PROJECT_NAME%
+        if exist examples cp -r examples %APPVEYOR_PROJECT_NAME%
+        if exist extensions cp -r extensions %APPVEYOR_PROJECT_NAME%
+        if exist externals cp -r externals %APPVEYOR_PROJECT_NAME%
+        if exist extras cp -r extras %APPVEYOR_PROJECT_NAME%
+        if exist help cp -r help %APPVEYOR_PROJECT_NAME%
+        if exist init cp -r init %APPVEYOR_PROJECT_NAME%
+        if exist java-classes cp -r java-classes %APPVEYOR_PROJECT_NAME%
+        if exist java-doc cp -r java-doc %APPVEYOR_PROJECT_NAME%
+        if exist jsui cp -r jsui %APPVEYOR_PROJECT_NAME%
+        if exist patchers cp -r patchers %APPVEYOR_PROJECT_NAME%
+        if exist tests cp -r tests %APPVEYOR_PROJECT_NAME%
+        cp icon.png %APPVEYOR_PROJECT_NAME%
+        cp License.md %APPVEYOR_PROJECT_NAME%
+        cp package-info.json %APPVEYOR_PROJECT_NAME%
+        cp ReadMe.md %APPVEYOR_PROJECT_NAME%  
+        set CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
         7z a dist/$PACKAGE_NAME-win-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME    
     - name: upload
       uses: shallwefootball/s3-upload-action@v1.0.1
