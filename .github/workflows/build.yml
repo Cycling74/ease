@@ -35,8 +35,9 @@ jobs:
         GITHUB_SHA: ${{ github.sha }}
       run: bash script/package.sh
     - name: upload
-      uses: actions/checkout@master
-      uses: shallwefootball/s3-upload-action@master
+      uses:
+        actions/checkout@master
+        shallwefootball/s3-upload-action@master
       with:
         aws_key_id: ${{ secrets.S3_ID }}
         aws_secret_access_key: ${{ secrets.S3_KEY }}
