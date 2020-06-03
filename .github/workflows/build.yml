@@ -30,7 +30,7 @@ jobs:
     - name: test
       run: cd build && ctest
     - name: package
-      env: |
+      env:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
       run: bash script/package.sh
