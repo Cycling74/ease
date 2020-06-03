@@ -70,9 +70,12 @@ jobs:
     - name: package_windows
       if: matrix.os == 'windows-latest'
       shell: cmd
+      env:
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_SHA: ${{ github.sha }}
       run: |
-        set PACKAGE_NAME=`echo ${{ github.repository }} | sed 's/.*\///g'`
-        set PACKAGE_REV=`echo ${{ github.sha }} | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
+        set PACKAGE_NAME=`echo %GITHUB_REPOSITORY% | findstr "s/.*\///g'`
+        set PACKAGE_REV=`echo %GITHUB_SHA:~0,7%`
         mkdir %APPVEYOR_PROJECT_NAME%
         if exist docs cp -r docs %APPVEYOR_PROJECT_NAME%
         if exist examples cp -r examples %APPVEYOR_PROJECT_NAME%
