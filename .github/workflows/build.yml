@@ -74,8 +74,8 @@ jobs:
         GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
         GITHUB_SHA: ${{ github.sha }}
       run: |
-        set PACKAGE_NAME=`echo %GITHUB_REPOSITORY_NAME%`
-        set PACKAGE_REV=`echo %GITHUB_SHA:~0,7%`
+        set PACKAGE_NAME=%GITHUB_REPOSITORY_NAME%
+        set PACKAGE_REV=%GITHUB_SHA:~0,7%
         echo PACKAGE_NAME: %PACKAGE_NAME%
         echo PACKAGE_REV: %PACKAGE_REV%
         mkdir %PACKAGE_NAME%
