@@ -80,7 +80,6 @@ jobs:
         echo PACKAGE_NAME: %PACKAGE_NAME%
         echo PACKAGE_REV: %PACKAGE_REV%
         echo EVENT: %GITHUB_EVENT%
-        echo %
         mkdir %PACKAGE_NAME%
         if exist docs cp -r docs %PACKAGE_NAME%
         if exist examples cp -r examples %PACKAGE_NAME%
