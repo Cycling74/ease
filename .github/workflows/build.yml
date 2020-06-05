@@ -29,6 +29,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: Configure
       run: mkdir build && cd build && cmake -G Xcode ..
+      runs-on: macos-latest
+    - name: Configure
+      run: mkdir build && cd build && cmake ..
+      runs-on: windows-latest
     - name: build
       run: cmake --build build --config=$CONFIG
     - name: test
