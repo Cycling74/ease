@@ -30,9 +30,9 @@ jobs:
     - name: Configure
       run: mkdir build && cd build && cmake -G Xcode ..
     - name: build
-      run: cmake --build build -C $CONFIG
+      run: cmake --build build --config=$CONFIG
     - name: test
-      run: cd build && ctest
+      run: cd build && ctest -C $CONFIG
     - name: package_macos
       if: matrix.os == 'macos-latest'
       env:
