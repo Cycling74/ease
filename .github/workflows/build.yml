@@ -37,7 +37,9 @@ jobs:
       env:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
+        GITHUB_CONTEXT: ${{ toJson(github) }}
       run: |
+        echo CONTEXT: $GITHUB_CONTEXT
         PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
         PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
         mkdir $PACKAGE_NAME
@@ -71,7 +73,6 @@ jobs:
       if: matrix.os == 'windows-latest'
       shell: cmd
       env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
         GITHUB_REPOSITORY: ${{ github.event.repository.name }}
         GITHUB_SHA: ${{ github.sha }}
       run: |
@@ -79,7 +80,6 @@ jobs:
         set PACKAGE_REV=`echo %GITHUB_SHA:~0,7%`
         echo PACKAGE_NAME: %PACKAGE_NAME%
         echo PACKAGE_REV: %PACKAGE_REV%
-        echo CONTEXT: %GITHUB_CONTEXT%
         mkdir %PACKAGE_NAME%
         if exist docs cp -r docs %PACKAGE_NAME%
         if exist examples cp -r examples %PACKAGE_NAME%
