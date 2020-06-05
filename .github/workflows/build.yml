@@ -34,14 +34,15 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: mkdir build && cd build && cmake ..
     - name: build
-      run: cmake --build build --config=${{ matrix.config }}
+      run: cmake --build build --config ${{ matrix.config }}
     - name: test
-      run: cd build && ctest -C $CONFIG
+      run: cd build && ctest -C ${{ matrix.config }}
     - name: package_macos
       if: matrix.os == 'macos-latest'
       env:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
+        CONFIG: ${{ matrix.config }}  
       run: |
         PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
         PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
