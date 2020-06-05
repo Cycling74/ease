@@ -19,15 +19,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
-        include:
-          - os: macos-latest
-            env: CONFIG=Debug
-          - os: windows-latest
-            env: CONFIG=Debug
-          - os: macos-latest
-            env: CONFIG=Release
-          - os: windows-latest
-            env: CONFIG=Release
+        env: [CONFIG=Debug, CONFIG=Release]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
