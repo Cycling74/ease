@@ -21,13 +21,13 @@ jobs:
         os: [macos-latest, windows-latest]
         include:
           - os: macos-latest
-            BuildConfiguration: Debug
+            env: CONFIG=Debug
           - os: windows-latest
-            BuildConfiguration: Debug
+            env: CONFIG=Debug
           - os: macos-latest
-            BuildConfiguration: Release
+            env: CONFIG=Release
           - os: windows-latest
-            BuildConfiguration: Release
+            env: CONFIG=Release
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,7 +47,9 @@ jobs:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
         GITHUB_CONTEXT: ${{ toJson(github) }}
+        MATRIX_CONTEXT: ${{ toJson(matrix) }}
       run: |
+        echo $MATRIX_CONTENT
         echo $GITHUB_CONTEXT
         PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
         PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
