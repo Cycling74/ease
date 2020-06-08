@@ -79,12 +79,14 @@ jobs:
       env:
         GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
         GITHUB_SHA: ${{ github.sha }}
-        CONFIG: ${{ matrix.config }}
+        GITHUB_CONFIG: ${{ matrix.config }}
       run: |
         set PACKAGE_NAME=%GITHUB_REPOSITORY_NAME%
         set PACKAGE_REV=%GITHUB_SHA:~0,7%
+        set PACKAGE_CONFIG=%GITHUB_CONFIG%
         echo PACKAGE_NAME: %PACKAGE_NAME%
         echo PACKAGE_REV: %PACKAGE_REV%
+        echo PACKAGE_CONFIG: %GITHUB_CONFIG%
         mkdir %PACKAGE_NAME%
         if exist docs cp -r docs %PACKAGE_NAME%
         if exist examples cp -r examples %PACKAGE_NAME%
@@ -101,9 +103,8 @@ jobs:
         cp icon.png %PACKAGE_NAME%
         cp License.md %PACKAGE_NAME%
         cp package-info.json %PACKAGE_NAME%
-        cp ReadMe.md %PACKAGE_NAME%  
-        set CONFIG_LOWERCASE=`echo %CONFIG% | tr '[A-Z]' '[a-z]'`
-        7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%CONFIG_LOWERCASE%.zip %PACKAGE_NAME%    
+        cp ReadMe.md %PACKAGE_NAME%
+        7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%PACKAGE_CONFIG%.zip %PACKAGE_NAME%    
     - name: upload
       uses: shallwefootball/s3-upload-action@v1.0.1
       with:
