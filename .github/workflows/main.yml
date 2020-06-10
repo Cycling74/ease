@@ -1,51 +1,42 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
-        config: [Debug, Release]
+        config: [debug, release]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
     - name: configure_macos
       if: matrix.os == 'macos-latest'
       run: mkdir build && cd build && cmake -G Xcode ..
+ 
     - name: configure_windows
       if: matrix.os == 'windows-latest'
       run: mkdir build && cd build && cmake ..
+
     - name: build
       run: cmake --build build --config ${{ matrix.config }}
+
     - name: test
       run: cd build && ctest -C ${{ matrix.config }}
+
     - name: package_macos
       if: matrix.os == 'macos-latest'
       env:
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_SHA: ${{ github.sha }}
-        CONFIG: ${{ matrix.config }}  
+        GITHUB_CONFIG: ${{ matrix.config }}  
       run: |
         PACKAGE_NAME=`echo $GITHUB_REPOSITORY | sed 's/.*\///g'`
         PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
+        PACKAGE_CONFIG=`echo $GITHUB_CONFIG`
         mkdir $PACKAGE_NAME
         if [ -e package-info.json ]; then cp package-info.json $PACKAGE_NAME; fi
         for f in *.md; do [ -e "$f" ] && cp "$f" $PACKAGE_NAME ; done
@@ -71,8 +62,8 @@ jobs:
         if [ -d tests ]; then cp -r tests $PACKAGE_NAME; fi
         if [ -e $PACKAGE_NAME/ReadMe-Public.md ]; then rm -f $PACKAGE_NAME/ReadMe.md; mv $PACKAGE_NAME/ReadMe-Public.md $PACKAGE_NAME/ReadMe.md; fi
         mkdir dist
-        CONFIG_LOWERCASE=`echo $CONFIG | tr '[A-Z]' '[a-z]'`
-        zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$CONFIG_LOWERCASE.zip $PACKAGE_NAME
+        zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$PACKAGE_CONFIG.zip $PACKAGE_NAME
+
     - name: package_windows
       if: matrix.os == 'windows-latest'
       shell: cmd
@@ -88,6 +79,12 @@ jobs:
         echo PACKAGE_REV: %PACKAGE_REV%
         echo PACKAGE_CONFIG: %GITHUB_CONFIG%
         mkdir %PACKAGE_NAME%
+        cp package-info.json %PACKAGE_NAME%
+        cp License.md %PACKAGE_NAME%
+        cp ReadMe.md %PACKAGE_NAME%
+        cp icon.png %PACKAGE_NAME%
+        cp CMakeLists.txt %PACKAGE_NAME%
+        if exist code cp -r code %PACKAGE_NAME%
         if exist docs cp -r docs %PACKAGE_NAME%
         if exist examples cp -r examples %PACKAGE_NAME%
         if exist extensions cp -r extensions %PACKAGE_NAME%
@@ -97,14 +94,18 @@ jobs:
         if exist init cp -r init %PACKAGE_NAME%
         if exist java-classes cp -r java-classes %PACKAGE_NAME%
         if exist java-doc cp -r java-doc %PACKAGE_NAME%
+        if exist javascript cp -r javascript %PACKAGE_NAME
         if exist jsui cp -r jsui %PACKAGE_NAME%
+        if exist media cp -r media %PACKAGE_NAME%
+        if exist misc cp -r misc %PACKAGE_NAME%
         if exist patchers cp -r patchers %PACKAGE_NAME%
+        if exist support cp -r support %PACKAGE_NAME%
+        if exist source cp -r source %PACKAGE_NAME%
         if exist tests cp -r tests %PACKAGE_NAME%
-        cp icon.png %PACKAGE_NAME%
-        cp License.md %PACKAGE_NAME%
-        cp package-info.json %PACKAGE_NAME%
-        cp ReadMe.md %PACKAGE_NAME%
-        7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%PACKAGE_CONFIG%.zip %PACKAGE_NAME%    
+        if exist ReadMe-Public.md cp ReadMe--Public.md %PACKAGE_NAME%/ReadMe.md
+        mkdir dist
+        7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%PACKAGE_CONFIG%.zip %PACKAGE_NAME%
+
     - name: upload
       uses: shallwefootball/s3-upload-action@v1.0.1
       with:
