@@ -21,8 +21,13 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: mkdir build && cd build && cmake ..
 
-    - name: build
-      run: cmake --build build --config ${{ matrix.config }}
+    - name: build_debug
+      if: matrix.config == 'debug'
+      run: cmake --build build --config 'Debug'
+
+    - name: build_release
+      if: matrix.config == 'release'
+      run: cmake --build build --config 'Release'
 
     - name: test
       run: cd build && ctest -C ${{ matrix.config }}
@@ -102,7 +107,7 @@ jobs:
         if exist support cp -r support %PACKAGE_NAME%
         if exist source cp -r source %PACKAGE_NAME%
         if exist tests cp -r tests %PACKAGE_NAME%
-        if exist ReadMe-Public.md cp ReadMe--Public.md %PACKAGE_NAME%/ReadMe.md
+        if exist ReadMe-Public.md cp ReadMe-Public.md %PACKAGE_NAME%/ReadMe.md
         mkdir dist
         7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%PACKAGE_CONFIG%.zip %PACKAGE_NAME%
 
