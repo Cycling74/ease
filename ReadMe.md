@@ -1,11 +1,7 @@
 # Ease
 Use easing functions in Max for audio, visuals, and automation.
 
-[![Build Status](https://travis-ci.org/Cycling74/ease.svg?branch=master)](https://travis-ci.org/Cycling74/ease)
-[![Build status](https://ci.appveyor.com/api/projects/status/uuqhmrr79w4pn2t4?svg=true)](https://ci.appveyor.com/project/c74/ease)
-
-The latest bleeding-edge builds can be found [here](https://s3-us-west-1.amazonaws.com/cycling74-ci-public/index.html?prefix=ease/).
-
+![CI](https://github.com/Cycling74/ease/workflows/CI/badge.svg)
 
 ## Contributors / Acknowledgements
 
