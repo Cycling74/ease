@@ -30,7 +30,7 @@ jobs:
       run: cmake --build build --config 'Release'
 
     - name: test
-      run: cd build && ctest -C ${{ matrix.config }}
+      run: cd build && ctest -C ${{ matrix.config }} . -V
 
     - name: package_macos
       if: matrix.os == 'macos-latest'
@@ -118,4 +118,3 @@ jobs:
         aws_secret_access_key: ${{ secrets.S3_KEY }}
         aws_bucket: cycling74-ci-public
         source_dir: 'dist'
-  
