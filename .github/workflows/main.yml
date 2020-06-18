@@ -92,25 +92,10 @@ jobs:
         cp ReadMe.md %PACKAGE_NAME%
         cp icon.png %PACKAGE_NAME%
         cp CMakeLists.txt %PACKAGE_NAME%
-        if exist code cp -r code %PACKAGE_NAME%
-        if exist docs cp -r docs %PACKAGE_NAME%
-        if exist examples cp -r examples %PACKAGE_NAME%
         if exist extensions cp -r extensions %PACKAGE_NAME%
         if exist externals cp -r externals %PACKAGE_NAME%
-        if exist extras cp -r extras %PACKAGE_NAME%
-        if exist help cp -r help %PACKAGE_NAME%
-        if exist init cp -r init %PACKAGE_NAME%
-        if exist java-classes cp -r java-classes %PACKAGE_NAME%
-        if exist java-doc cp -r java-doc %PACKAGE_NAME%
-        if exist javascript cp -r javascript %PACKAGE_NAME
-        if exist jsui cp -r jsui %PACKAGE_NAME%
-        if exist media cp -r media %PACKAGE_NAME%
-        if exist misc cp -r misc %PACKAGE_NAME%
-        if exist patchers cp -r patchers %PACKAGE_NAME%
         if exist support cp -r support %PACKAGE_NAME%
-        if exist source cp -r source %PACKAGE_NAME%
         if exist tests cp -r tests %PACKAGE_NAME%
-        if exist ReadMe-Public.md cp ReadMe-Public.md %PACKAGE_NAME%/ReadMe.md
         
     - uses: actions/upload-artifact@v2
       with:
