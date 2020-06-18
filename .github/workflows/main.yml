@@ -12,6 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      
+    - uses: benjlevesque/short-sha@v1.1
+      id: short-sha
+      with:
+        length: 7
 
     - name: configure_macos
       if: matrix.os == 'macos-latest'
@@ -68,7 +73,6 @@ jobs:
         if [ -e $PACKAGE_NAME/ReadMe-Public.md ]; then rm -f $PACKAGE_NAME/ReadMe.md; mv $PACKAGE_NAME/ReadMe-Public.md $PACKAGE_NAME/ReadMe.md; fi
         mkdir dist
         zip -r dist/$PACKAGE_NAME-mac-$PACKAGE_REV-$PACKAGE_CONFIG.zip $PACKAGE_NAME
-
     - name: package_windows
       if: matrix.os == 'windows-latest'
       shell: cmd
@@ -110,11 +114,8 @@ jobs:
         if exist ReadMe-Public.md cp ReadMe-Public.md %PACKAGE_NAME%/ReadMe.md
         mkdir dist
         7z a dist/%PACKAGE_NAME%-win-%PACKAGE_REV%-%PACKAGE_CONFIG%.zip %PACKAGE_NAME%
-
-    - name: upload
-      uses: shallwefootball/s3-upload-action@v1.0.1
+        
+    - uses: actions/upload-artifact@v2
       with:
-        aws_key_id: ${{ secrets.S3_ID }}
-        aws_secret_access_key: ${{ secrets.S3_KEY }}
-        aws_bucket: cycling74-ci-public
-        source_dir: 'dist'
+        name: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-${{ matrix.config }}
+        path: dist
