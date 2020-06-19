@@ -95,15 +95,12 @@ jobs:
     needs: package
 
     steps:
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
     - uses: benjlevesque/short-sha@v1.1
       id: short-sha
       with:
         length: 7
     - uses: ncipollo/release-action@v1
+      if: ${{ github.ref == 'refs/tags/*' }}
       with:
-        artifacts: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-${{ matrix.config }}
+        artifacts: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-release
         token: ${{ secrets.GITHUB_TOKEN }}
