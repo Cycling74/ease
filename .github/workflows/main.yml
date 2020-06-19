@@ -91,15 +91,14 @@ jobs:
         path: ${{ github.event.repository.name }}
 
   release:
-    on:
-      push:
-        tags:
-        - '*'
-
     runs-on: macos-latest
     needs: package
 
     steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - uses: benjlevesque/short-sha@v1.1
       id: short-sha
       with:
