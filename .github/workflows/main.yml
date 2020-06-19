@@ -102,7 +102,7 @@ jobs:
     - uses: Roang-zero1/github-create-release-action@master
       if: ${{ contains( github.ref, 'refs/tags/' ) }}
       with:
-        args: 
+        args:
         - ${{ github.event.repository.name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
