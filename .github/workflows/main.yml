@@ -77,21 +77,9 @@ jobs:
       shell: cmd
       env:
         GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
-        GITHUB_SHA: ${{ github.sha }}
-        GITHUB_CONFIG: ${{ matrix.config }}
       run: |
         set PACKAGE_NAME=%GITHUB_REPOSITORY_NAME%
-        set PACKAGE_REV=%GITHUB_SHA:~0,7%
-        set PACKAGE_CONFIG=%GITHUB_CONFIG%
-        echo PACKAGE_NAME: %PACKAGE_NAME%
-        echo PACKAGE_REV: %PACKAGE_REV%
-        echo PACKAGE_CONFIG: %GITHUB_CONFIG%
         mkdir %PACKAGE_NAME%
-        cp package-info.json %PACKAGE_NAME%
-        cp License.md %PACKAGE_NAME%
-        cp ReadMe.md %PACKAGE_NAME%
-        cp icon.png %PACKAGE_NAME%
-        cp CMakeLists.txt %PACKAGE_NAME%
         if exist extensions cp -r extensions %PACKAGE_NAME%
         if exist externals cp -r externals %PACKAGE_NAME%
         if exist support cp -r support %PACKAGE_NAME%
@@ -101,3 +89,22 @@ jobs:
       with:
         name: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-${{ matrix.config }}
         path: ${{ github.event.repository.name }}
+
+  release:
+    on:
+      push:
+        tags:
+        - '*'
+
+    runs-on: macos-latest
+    needs: package
+
+    steps:
+    - uses: benjlevesque/short-sha@v1.1
+      id: short-sha
+      with:
+        length: 7
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-${{ matrix.config }}
+        token: ${{ secrets.GITHUB_TOKEN }}
