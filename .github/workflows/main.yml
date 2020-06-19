@@ -102,5 +102,6 @@ jobs:
     - uses: ncipollo/release-action@v1
       if: ${{ contains( github.ref, 'refs/tags/' ) }}
       with:
-        artifacts: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-release
+        artifacts: ${{ github.event.repository.name }}
+        body: "Max Package for all supported platforms"
         token: ${{ secrets.GITHUB_TOKEN }}
