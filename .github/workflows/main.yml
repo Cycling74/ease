@@ -115,7 +115,7 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: release-build
+        name: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}-zipped-release
         path: ${{ github.event.repository.name }}-${{ steps.short-sha.outputs.sha }}.zip
 
     - uses: ncipollo/release-action@v1.7.1
