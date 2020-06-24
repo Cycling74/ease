@@ -48,7 +48,7 @@ jobs:
         PACKAGE_REV=`echo $GITHUB_SHA | sed -e 's/^[[:alnum:]]\{7\}/&-/g' | sed 's/-.*//'`
         PACKAGE_CONFIG=`echo $GITHUB_CONFIG`
         PACKAGE_DIST=$GITHUB_CONFIG/$PACKAGE_NAME
-        mkdir $PACKAGE_DIST
+        mkdir -p $PACKAGE_DIST
         if [ -e package-info.json ]; then cp package-info.json $PACKAGE_DIST; fi
         for f in *.md; do [ -e "$f" ] && cp "$f" $PACKAGE_DIST ; done
         if [ -e icon.png ]; then cp icon.png $PACKAGE_DIST; fi
@@ -82,6 +82,7 @@ jobs:
       run: |
         set PACKAGE_NAME=%GITHUB_REPOSITORY_NAME%
         set PACKAGE_DIST= %GITHUB_CONFIG\\%GITHUB_REPOSITORY_NAME%
+        mkdir %GITHUB_CONFIG%
         mkdir %PACKAGE_DIST%
         if exist extensions cp -r extensions %PACKAGE_DIST%
         if exist externals cp -r externals %PACKAGE_DIST%
