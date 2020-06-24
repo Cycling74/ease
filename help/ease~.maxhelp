@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 2,
+			"minor" : 1,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,7 @@
 		"subpatcher_template" : "",
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-2",
@@ -49,14 +50,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 768.0, 815.0 ],
+						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,6 +85,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"hidden" : 1,
@@ -395,8 +397,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -430,6 +432,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [  ],
 						"lines" : [  ],
 						"styles" : [ 							{
@@ -466,8 +469,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -501,6 +504,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
@@ -553,13 +557,13 @@
 									"patching_rect" : [ 55.0, 585.0, 136.0, 47.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "live.gain~",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 4,
-											"parameter_mmin" : -70.0,
+											"parameter_initial" : [ 0.0 ],
 											"parameter_longname" : "live.gain~[2]",
 											"parameter_mmax" : 6.0,
-											"parameter_initial" : [ 0.0 ]
+											"parameter_mmin" : -70.0,
+											"parameter_shortname" : "live.gain~",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 4
 										}
 
 									}
@@ -582,12 +586,14 @@
 							}
 , 							{
 								"box" : 								{
+									"basictuning" : 440,
 									"clipheight" : 60.0,
 									"data" : 									{
 										"clips" : [ 											{
 												"absolutepath" : "brushes.aif",
 												"filename" : "brushes.aif",
 												"filekind" : "audiofile",
+												"id" : "u859002299",
 												"loop" : 1,
 												"content_state" : 												{
 													"mode" : [ "basic" ],
@@ -611,12 +617,21 @@
  ]
 									}
 ,
+									"followglobaltempo" : 0,
+									"formantcorrection" : 0,
 									"id" : "obj-45",
 									"maxclass" : "playlist~",
+									"mode" : "basic",
 									"numinlets" : 1,
 									"numoutlets" : 5,
+									"originallength" : [ 0.0, "ticks" ],
+									"originaltempo" : 120.0,
 									"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-									"patching_rect" : [ 405.0, 200.0, 285.0, 60.0 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 405.0, 200.0, 285.0, 60.0 ],
+									"pitchcorrection" : 0,
+									"quality" : "basic",
+									"timestretch" : [ 0 ]
 								}
 
 							}
@@ -645,8 +660,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 2,
+											"minor" : 1,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -679,6 +694,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-32",
@@ -939,8 +955,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 2,
+											"minor" : 1,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -973,6 +989,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-32",
@@ -1246,13 +1263,13 @@
 									"patching_rect" : [ 440.0, 585.0, 136.0, 47.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "live.gain~",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 4,
-											"parameter_mmin" : -70.0,
+											"parameter_initial" : [ 0.0 ],
 											"parameter_longname" : "live.gain~[1]",
 											"parameter_mmax" : 6.0,
-											"parameter_initial" : [ 0.0 ]
+											"parameter_mmin" : -70.0,
+											"parameter_shortname" : "live.gain~",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 4
 										}
 
 									}
@@ -1263,12 +1280,14 @@
 							}
 , 							{
 								"box" : 								{
+									"basictuning" : 440,
 									"clipheight" : 60.0,
 									"data" : 									{
 										"clips" : [ 											{
 												"absolutepath" : "brushes.aif",
 												"filename" : "brushes.aif",
 												"filekind" : "audiofile",
+												"id" : "u060002320",
 												"loop" : 1,
 												"content_state" : 												{
 													"mode" : [ "basic" ],
@@ -1292,12 +1311,21 @@
  ]
 									}
 ,
+									"followglobaltempo" : 0,
+									"formantcorrection" : 0,
 									"id" : "obj-23",
 									"maxclass" : "playlist~",
+									"mode" : "basic",
 									"numinlets" : 1,
 									"numoutlets" : 5,
+									"originallength" : [ 0.0, "ticks" ],
+									"originaltempo" : 120.0,
 									"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-									"patching_rect" : [ 55.0, 200.0, 285.0, 60.0 ]
+									"parameter_enable" : 0,
+									"patching_rect" : [ 55.0, 200.0, 285.0, 60.0 ],
+									"pitchcorrection" : 0,
+									"quality" : "basic",
+									"timestretch" : [ 0 ]
 								}
 
 							}
@@ -1638,14 +1666,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
+						"rect" : [ 100.0, 126.0, 768.0, 815.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1673,7 +1701,20 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 450.0, 335.0, 66.0, 22.0 ],
+									"text" : "phasor~ 2."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bubble" : 1,
 									"fontname" : "Arial",
@@ -1684,18 +1725,6 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 500.0, 240.0, 120.0, 25.0 ],
 									"text" : "Turn on Audio"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-36",
-									"maxclass" : "toggle",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 450.0, 325.0, 40.0, 40.0 ]
 								}
 
 							}
@@ -1734,18 +1763,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-28",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 450.0, 370.0, 47.0, 22.0 ],
-									"text" : "$1 500"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"bubble" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
@@ -1754,20 +1771,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 500.0, 310.0, 120.0, 69.0 ],
+									"patching_rect" : [ 525.0, 310.0, 120.0, 69.0 ],
 									"text" : "Apply the easing function to a stream of values"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-18",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "signal", "bang" ],
-									"patching_rect" : [ 450.0, 405.0, 50.0, 22.0 ],
-									"text" : "line~ 0."
 								}
 
 							}
@@ -2042,7 +2047,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 620.0, 335.0, 20.0, 20.0 ],
+									"patching_rect" : [ 645.0, 335.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"text" : "3",
 									"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -2111,7 +2116,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-17", 0 ],
-									"source" : [ "obj-18", 0 ]
+									"source" : [ "obj-19", 0 ]
 								}
 
 							}
@@ -2138,22 +2143,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
-									"source" : [ "obj-28", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-28", 0 ],
-									"source" : [ "obj-36", 0 ]
 								}
 
 							}
@@ -2234,12 +2225,13 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-28::obj-9" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"obj-28::obj-29" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-28::obj-9" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"parameterbanks" : 			{
 
 			}
-
+,
+			"inherited_shortname" : 1
 		}
 ,
 		"dependency_cache" : [ 			{
