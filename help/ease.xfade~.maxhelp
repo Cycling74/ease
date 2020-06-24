@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 2,
+			"minor" : 1,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 390.0, 107.0, 768.0, 841.0 ],
+		"rect" : [ 100.0, 100.0, 768.0, 841.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,7 @@
 		"subpatcher_template" : "",
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-2",
@@ -49,14 +50,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 390.0, 133.0, 768.0, 815.0 ],
+						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,6 +85,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"hidden" : 1,
@@ -104,8 +106,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 405.0, 605.0, 235.0, 127.0 ],
-									"presentation_linecount" : 9,
+									"patching_rect" : [ 405.0, 605.0, 236.0, 127.0 ],
 									"text" : "In the multi-channel version, we use the same LFO whose shape is modified in the same manner using the easing function.\n\nUnlike the single-channel example, this example then defines 4 ranges in which to scale that LFO, resulting in 4 channels of essentially the same output but in a different range."
 								}
 
@@ -536,8 +537,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -571,6 +572,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [  ],
 						"lines" : [  ],
 						"styles" : [ 							{
@@ -607,14 +609,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 2,
+							"minor" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 768.0, 815.0 ],
+						"rect" : [ 100.0, 126.0, 768.0, 815.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -642,6 +644,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"border" : 0,
@@ -685,14 +688,14 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 0,
-											"revision" : 2,
+											"minor" : 1,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 63.0, 104.0, 960.0, 511.0 ],
+										"rect" : [ 975.0, 512.0, 960.0, 511.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -719,6 +722,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-11",
@@ -1299,13 +1303,13 @@
 									"patching_rect" : [ 430.0, 635.0, 136.0, 47.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "live.gain~",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 4,
-											"parameter_mmin" : -70.0,
+											"parameter_initial" : [ 0.0 ],
 											"parameter_longname" : "live.gain~[3]",
 											"parameter_mmax" : 6.0,
-											"parameter_initial" : [ 0.0 ]
+											"parameter_mmin" : -70.0,
+											"parameter_shortname" : "live.gain~",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 4
 										}
 
 									}
@@ -1844,7 +1848,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"order" : 0,
+									"source" : [ "obj-58", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
+									"order" : 1,
 									"source" : [ "obj-58", 0 ]
 								}
 
@@ -1920,29 +1933,69 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-29::obj-48::obj-69::obj-55" : [ "power", "power", 0 ],
-			"obj-29::obj-48::obj-1::obj-28" : [ "Res[1]", "Res", 0 ],
-			"obj-29::obj-48::obj-69::obj-63" : [ "CV3", "CV3", 0 ],
-			"obj-29::obj-48::obj-1::obj-95" : [ "ResCV[1]", "CV", 0 ],
-			"obj-29::obj-48::obj-69::obj-95" : [ "ResCV", "CV", 0 ],
 			"obj-29::obj-29" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-29::obj-48::obj-69::obj-54" : [ "CV1", "CV1", 0 ],
-			"obj-29::obj-48::obj-1::obj-4" : [ "Offset[1]", "Offset", 0 ],
-			"obj-29::obj-48::obj-1::obj-22" : [ "TimeMode[1]", "TimeMode", 1 ],
-			"obj-29::obj-48::obj-69::obj-20" : [ "Freq", "Freq", 0 ],
-			"obj-29::obj-48::obj-1::obj-63" : [ "CV3[1]", "CV3", 0 ],
-			"obj-29::obj-48::obj-69::obj-22" : [ "TimeMode", "TimeMode", 1 ],
-			"obj-29::obj-48::obj-1::obj-55" : [ "power[1]", "power", 0 ],
-			"obj-29::obj-48::obj-1::obj-23" : [ "CV2[1]", "CV2", 0 ],
-			"obj-29::obj-48::obj-69::obj-23" : [ "CV2", "CV2", 0 ],
 			"obj-29::obj-48::obj-1::obj-20" : [ "Freq[1]", "Freq", 0 ],
-			"obj-29::obj-48::obj-69::obj-28" : [ "Res", "Res", 0 ],
+			"obj-29::obj-48::obj-1::obj-22" : [ "TimeMode[1]", "TimeMode", 1 ],
+			"obj-29::obj-48::obj-1::obj-23" : [ "CV2[1]", "CV2", 0 ],
+			"obj-29::obj-48::obj-1::obj-28" : [ "Res[1]", "Res", 0 ],
+			"obj-29::obj-48::obj-1::obj-4" : [ "Offset[1]", "Offset", 0 ],
 			"obj-29::obj-48::obj-1::obj-54" : [ "CV1[1]", "CV1", 0 ],
+			"obj-29::obj-48::obj-1::obj-55" : [ "power[1]", "power", 0 ],
+			"obj-29::obj-48::obj-1::obj-63" : [ "CV3[1]", "CV3", 0 ],
+			"obj-29::obj-48::obj-1::obj-95" : [ "ResCV[1]", "CV", 0 ],
+			"obj-29::obj-48::obj-69::obj-20" : [ "Freq", "Freq", 0 ],
+			"obj-29::obj-48::obj-69::obj-22" : [ "TimeMode", "TimeMode", 1 ],
+			"obj-29::obj-48::obj-69::obj-23" : [ "CV2", "CV2", 0 ],
+			"obj-29::obj-48::obj-69::obj-28" : [ "Res", "Res", 0 ],
 			"obj-29::obj-48::obj-69::obj-4" : [ "Offset", "Offset", 0 ],
+			"obj-29::obj-48::obj-69::obj-54" : [ "CV1", "CV1", 0 ],
+			"obj-29::obj-48::obj-69::obj-55" : [ "power", "power", 0 ],
+			"obj-29::obj-48::obj-69::obj-63" : [ "CV3", "CV3", 0 ],
+			"obj-29::obj-48::obj-69::obj-95" : [ "ResCV", "CV", 0 ],
 			"parameterbanks" : 			{
 
 			}
+,
+			"parameter_overrides" : 			{
+				"obj-29::obj-48::obj-1::obj-20" : 				{
+					"parameter_longname" : "Freq[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-22" : 				{
+					"parameter_longname" : "TimeMode[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-23" : 				{
+					"parameter_longname" : "CV2[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-28" : 				{
+					"parameter_longname" : "Res[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-4" : 				{
+					"parameter_longname" : "Offset[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-54" : 				{
+					"parameter_longname" : "CV1[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-55" : 				{
+					"parameter_longname" : "power[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-63" : 				{
+					"parameter_longname" : "CV3[1]"
+				}
+,
+				"obj-29::obj-48::obj-1::obj-95" : 				{
+					"parameter_longname" : "ResCV[1]"
+				}
 
+			}
+,
+			"inherited_shortname" : 1
 		}
 ,
 		"dependency_cache" : [ 			{
