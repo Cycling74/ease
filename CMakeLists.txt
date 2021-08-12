@@ -1,15 +1,6 @@
-cmake_minimum_required(VERSION 3.16)
-
-if (APPLE)
-    set (CMAKE_OSX_DEPLOYMENT_TARGET "10.11")
-endif ()
-
-
-project(Min-DevKit)
-
+cmake_minimum_required(VERSION 3.19)
 
 string(REGEX REPLACE "(.*)/" "" THIS_PACKAGE_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
-
 
 if (${CMAKE_GENERATOR} MATCHES "Xcode")
          if (${XCODE_VERSION} VERSION_LESS 10)
@@ -18,6 +9,7 @@ if (${CMAKE_GENERATOR} MATCHES "Xcode")
         endif ()
 endif ()
 
+set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64")
 
 # Fetch the correct version of the min-api
 message(STATUS "Updating Git Submodules")
