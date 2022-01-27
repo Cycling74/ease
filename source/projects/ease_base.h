@@ -15,8 +15,21 @@ public:
 	argument<number> outlow_arg {this, "output_range[low]", "Initial low value for the output range."};
 	argument<number> outhigh_arg {this, "output_range[high]", "Initial high value for the output range."};
 
-	attribute<lib::easing::function> easing_function {this, "function", lib::easing::function::linear,
-		lib::easing::function_info, description {"Easing function to be applied or generated."}};
+	attribute<lib::easing::function> easing_function {this, "function",
+		lib::easing::function::linear,
+		lib::easing::function_info,
+		description {"Easing function to be applied or generated."},
+		setter { MIN_FUNCTION {
+			easing_function_pending = true;
+			current_function = args[0];
+
+			if (initializing) {
+				previous_function = current_function;
+				initializing = false;
+			}
+
+			return args;
+		}}};
 
 	attribute<numbers> input_range {this, "input_range", {0.0, 1.0},
 		description {"Expected numeric range for the input."},
@@ -29,6 +42,10 @@ public:
 		setter { MIN_FUNCTION {
 			return range_attr_arg_check(args);
 		}}};
+
+	attribute<bool> syncupdate {this, "syncupdate", false,
+		description { "Change the function only after the input changes direction/resets phase." }
+	};
 
 
 protected:
@@ -94,6 +111,60 @@ protected:
 	///	@return			The calculated output.
 
 	number apply_easing_function(number input) {
+		history[history_index] = input;
+		history_index = (history_index + 1) % history.size();
+
+		// Bail out early if we don't need to do logic for pending easing functions
+		if (!syncupdate) {
+			return apply_easing_function(input, current_function);
+		}
+
+		// Otherwise, we need to see which easing function to use.
+		if (easing_function_pending) {
+			if (history_changed_direction()) {
+				// It's time to switch
+				easing_function_pending = false;
+				previous_function = current_function;
+			}
+			else {
+				// There's a function pending, but it's not ready yet
+				return apply_easing_function(input, previous_function);
+			}
+		}
+
+		return apply_easing_function(input, current_function);
+	}
+
+
+private:
+	bool initializing = true;
+	bool easing_function_pending = false;
+	lib::easing::function previous_function;
+	lib::easing::function current_function;
+	std::array<number, 3> history = { 0, 0, 0 };
+	int history_index = 0;
+
+	bool history_changed_direction() {
+		// history[n]
+		int i = history_index - 1;
+		int n = history.size();
+		number z = history[(i + n) % n];
+
+		// history[n - 1]
+		number y = history[(i + n - 1) % n];
+
+		// history[n - 2]
+		number x = history[(i + n - 2) % n];
+
+		if (((z - y) > 0.0 && (y - x) < 0.0) || ((z - y) < 0.0 && (y - x) > 0.0)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	number apply_easing_function(number input, lib::easing::function fn) {
 		const numbers& input_range  = this->input_range;
 		const numbers& output_range = this->output_range;
 
@@ -103,7 +174,7 @@ protected:
 		number diff  = (input_range[1] - input_range[0]);
 		number scale = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
 		number x     = (input - input_range[0]) * scale;
-		number y     = lib::easing::apply(easing_function, x);
+		number y     = lib::easing::apply(fn, x);
 
 		return (y * (output_range[1] - output_range[0])) + output_range[0];
 	}
