@@ -3,6 +3,7 @@
 ///	@license	Use of this source code is governed by the MIT License found in the License.md file.
 
 #include "c74_min.h"
+#include <algorithm>
 #include <atomic>
 
 using namespace c74::min;
@@ -65,6 +66,10 @@ public:
 			m_amount = args[0];
 			return args;
 		}}};
+
+	attribute<bool> clip {this, "clip", false,
+		description {"Constrain the output to the output range."}
+	};
 
 	attribute<bool> syncupdate {this, "syncupdate", false,
 		description { "Change the function only after the input changes direction/resets phase." }
@@ -182,13 +187,17 @@ private:
 	}
 
 	number apply_easing_function(number input, lib::easing::function fn) {
-		number in_low  = m_in_low;
-		number out_low = m_out_low;
-		number diff    = m_in_high - in_low;
-		number scale   = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
-		number x       = (input - in_low) * scale;
-		number y       = x + m_amount * (lib::easing::apply(fn, x) - x);
+		number in_low   = m_in_low;
+		number out_low  = m_out_low;
+		number diff     = m_in_high - in_low;
+		number scale    = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
+		number x        = (input - in_low) * scale;
+		number y        = x + m_amount * (lib::easing::apply(fn, x) - x);
+		number out_high = m_out_high;
+		number output   = (y * (out_high - out_low)) + out_low;
 
-		return (y * (m_out_high - out_low)) + out_low;
+		if (clip)
+			output = std::clamp(output, std::min(out_low, out_high), std::max(out_low, out_high));
+		return output;
 	}
 };

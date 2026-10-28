@@ -82,6 +82,11 @@
 			<description>Mix between a linear mapping (0) and the easing function (1). Values are clamped to the range 0 to 1. The default is 1. </description>
 		</attribute>
 
+		<attribute name='clip' get='1' set='1' type='long' size='1' >
+			<digest>Constrain the output to the output range</digest>
+			<description>When enabled, the output is constrained to the <at>output_range</at>, so easing functions that overshoot (such as the back and elastic functions) and inputs outside the <at>input_range</at> do not exceed it. The default is 0 (off). </description>
+		</attribute>
+
 	</attributelist>
 
 
