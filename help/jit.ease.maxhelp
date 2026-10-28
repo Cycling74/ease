@@ -172,6 +172,7 @@
 							}
 , 							{
 								"box" : 								{
+									"enable" : 1,
 									"id" : "obj-3",
 									"maxclass" : "jit.pworld",
 									"numinlets" : 1,
