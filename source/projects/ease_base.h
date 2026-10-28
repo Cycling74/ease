@@ -3,11 +3,20 @@
 ///	@license	Use of this source code is governed by the MIT License found in the License.md file.
 
 #include "c74_min.h"
+#include <atomic>
 
 using namespace c74::min;
 
 template<class derived_min_class_type>
 class ease_base : public object<derived_min_class_type> {
+private:
+	// Copies of the range attributes for the audio thread, which must not read the vectors while the main thread replaces them.
+	// Declared before the attributes because their setters run during construction.
+	std::atomic<number> m_in_low {0.0};
+	std::atomic<number> m_in_high {1.0};
+	std::atomic<number> m_out_low {0.0};
+	std::atomic<number> m_out_high {1.0};
+
 public:
 	argument<number> function_arg {this, "function", "Initial easing function to use."};
 	argument<number> inlow_arg {this, "input_range[low]", "Initial low value for the input range."};
@@ -34,13 +43,19 @@ public:
 	attribute<numbers> input_range {this, "input_range", {0.0, 1.0},
 		description {"Expected numeric range for the input."},
 		setter { MIN_FUNCTION {
-			return range_attr_arg_check(args);
+			auto range = range_attr_arg_check(args);
+			m_in_low   = range[0];
+			m_in_high  = range[1];
+			return range;
 		}}};
 
 	attribute<numbers> output_range {this, "output_range", {0.0, 1.0},
 		description {"Expected numeric range for the output."},
 		setter { MIN_FUNCTION {
-			return range_attr_arg_check(args);
+			auto range = range_attr_arg_check(args);
+			m_out_low  = range[0];
+			m_out_high = range[1];
+			return range;
 		}}};
 
 	attribute<bool> syncupdate {this, "syncupdate", false,
@@ -69,20 +84,14 @@ protected:
 			--count;
 		}
 
-		numbers& input_range  = this->input_range;
-		numbers& output_range = this->output_range;
-
 		if (count == 0)
 			;
 		else if (count == 2) {    // if there are two args they are the min/max range for the output
-			output_range[0] = args[0 + offset];
-			output_range[1] = args[1 + offset];
+			output_range = atoms{ args[0 + offset], args[1 + offset] };
 		}
 		else if (count == 4) {    // if there are four args they are the min/max range for the input and the output
-			input_range[0]  = args[0 + offset];
-			input_range[1]  = args[1 + offset];
-			output_range[0] = args[2 + offset];
-			output_range[1] = args[3 + offset];
+			input_range  = atoms{ args[0 + offset], args[1 + offset] };
+			output_range = atoms{ args[2 + offset], args[3 + offset] };
 		}
 		else
 			error("incorrect argument list for object");
@@ -151,10 +160,10 @@ private:
 		number z = history[(i + n) % n];
 
 		// history[n - 1]
-		number y = history[(i + n - 1) % n];
+		number y       = history[(i + n - 1) % n];
 
 		// history[n - 2]
-		number x = history[(i + n - 2) % n];
+		number x       = history[(i + n - 2) % n];
 
 		if (((z - y) > 0.0 && (y - x) < 0.0) || ((z - y) < 0.0 && (y - x) > 0.0)) {
 			return true;
@@ -165,17 +174,13 @@ private:
 	}
 
 	number apply_easing_function(number input, lib::easing::function fn) {
-		const numbers& input_range  = this->input_range;
-		const numbers& output_range = this->output_range;
+		number in_low  = m_in_low;
+		number out_low = m_out_low;
+		number diff    = m_in_high - in_low;
+		number scale   = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
+		number x       = (input - in_low) * scale;
+		number y       = lib::easing::apply(fn, x);
 
-		assert(input_range.size() == 2);
-		assert(output_range.size() == 2);
-
-		number diff  = (input_range[1] - input_range[0]);
-		number scale = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
-		number x     = (input - input_range[0]) * scale;
-		number y     = lib::easing::apply(fn, x);
-
-		return (y * (output_range[1] - output_range[0])) + output_range[0];
+		return (y * (m_out_high - out_low)) + out_low;
 	}
 };
