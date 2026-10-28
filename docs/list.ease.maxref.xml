@@ -82,6 +82,11 @@
 			<description>Easing function to be applied or generated. </description>
 		</attribute>
 
+		<attribute name='amount' get='1' set='1' type='float64' size='1' >
+			<digest>Mix between linear and the easing function</digest>
+			<description>Mix between a linear mapping (0) and the easing function (1). Values are clamped to the range 0 to 1. The default is 1. </description>
+		</attribute>
+
 	</attributelist>
 
 

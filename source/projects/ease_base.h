@@ -16,6 +16,7 @@ private:
 	std::atomic<number> m_in_high {1.0};
 	std::atomic<number> m_out_low {0.0};
 	std::atomic<number> m_out_high {1.0};
+	std::atomic<number> m_amount {1.0};
 
 public:
 	argument<number> function_arg {this, "function", "Initial easing function to use."};
@@ -56,6 +57,13 @@ public:
 			m_out_low  = range[0];
 			m_out_high = range[1];
 			return range;
+		}}};
+
+	attribute<number, threadsafe::no, limit::clamp> amount {this, "amount", 1.0, range {0.0, 1.0},
+		description {"Mix between linear (0) and the easing function (1)."},
+		setter { MIN_FUNCTION {
+			m_amount = args[0];
+			return args;
 		}}};
 
 	attribute<bool> syncupdate {this, "syncupdate", false,
@@ -179,7 +187,7 @@ private:
 		number diff    = m_in_high - in_low;
 		number scale   = (diff > DBL_EPSILON || diff < -DBL_EPSILON) ? 1.0 / diff : 1.0 / DBL_EPSILON;
 		number x       = (input - in_low) * scale;
-		number y       = lib::easing::apply(fn, x);
+		number y       = x + m_amount * (lib::easing::apply(fn, x) - x);
 
 		return (y * (m_out_high - out_low)) + out_low;
 	}
