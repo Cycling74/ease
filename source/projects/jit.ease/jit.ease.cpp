@@ -4,7 +4,7 @@
 
 #include "../ease_base.h"
 
-class ease : public ease_base<ease>, public matrix_operator<> {
+class jit_ease : public ease_base<jit_ease>, public matrix_operator<> {
 public:
 	MIN_DESCRIPTION {"Generate or apply an easing function."};
 	MIN_TAGS {"ease, functions"};
@@ -14,7 +14,7 @@ public:
 	inlet<>  input {this, "(matrix) apply easing function.", "matrix"};
 	outlet<> output {this, "(matrix) easing function", "matrix"};
 
-	ease(const atoms& args = {}) {
+	jit_ease(const atoms& args = {}) {
 		handle_object_arguments(args);
 	}
 
@@ -29,4 +29,4 @@ public:
 	}
 };
 
-MIN_EXTERNAL(ease);
+MIN_EXTERNAL(jit_ease);
