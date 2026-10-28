@@ -87,6 +87,11 @@
 			<description>When enabled, the output is constrained to the <at>output_range</at>, so easing functions that overshoot (such as the back and elastic functions) and inputs outside the <at>input_range</at> do not exceed it. The default is 0 (off). </description>
 		</attribute>
 
+		<attribute name='syncupdate' get='1' set='1' type='long' size='1' >
+			<digest>Change the function only when the input changes direction</digest>
+			<description>When enabled, a new <at>function</at> takes effect only after the input changes direction, such as when a driving <o>phasor~</o> resets its phase. This avoids a discontinuity in the output when the function changes mid-ramp. The default is 0 (off). </description>
+		</attribute>
+
 	</attributelist>
 
 
